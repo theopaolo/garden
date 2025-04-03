@@ -34,13 +34,18 @@ module.exports = function(eleventyConfig) {
         .filter((item) => {
             const path = item.inputPath;
 
-            // Skip system/hidden folders
+            // Skip system/hidden folders and navigation pages
             if (
-            path.includes("/.trash/") ||
-            path.includes("/.obsidian/") ||
-            path.includes("/.git/")
+                path.includes("/.trash/") ||
+                path.includes("/.obsidian/") ||
+                path.includes("/.git/") ||
+                path.includes("/src/notes.njk") ||
+                path.includes("/src/tags.njk") ||
+                path.includes("/src/index.njk") ||
+                path.includes("/src/labo.njk") ||
+                item.data.layout === "base.njk"
             ) {
-            return false;
+                return false;
             }
 
             // Only keep valid notes
