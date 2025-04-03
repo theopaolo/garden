@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Labo.md",
+                "file": "Labo/Labo.md",
                 "mode": "source",
                 "source": false
               },
@@ -168,10 +168,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f6d60c08d46a0625",
+  "active": "b4f2e33d761c978c",
   "lastOpenFiles": [
     "Bonjour jardin.md",
-    "Labo.md",
+    "Labo/Labo.md",
     "Untitled",
     "Labo",
     "Ideas"
