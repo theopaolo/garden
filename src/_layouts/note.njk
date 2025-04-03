@@ -20,22 +20,23 @@ layout: base.njk
   </div>
   {% endif %}
 
-  <div class="notes-list">
-    {% if page.url.startsWith('/labo/') %}
-      {% set otherNotes = collections.labo | reverse | excludeItemByUrl(page.url) | slice(0, 5) %}
-    {% else %}
-      {% set otherNotes = collections.notes | reverse | excludeItemByUrl(page.url) | slice(0, 5) %}
-    {% endif %}
+  {% if page.url.startsWith('/labo/') %}
+    {% set otherNotes = collections.labo | reverse | excludeItemByUrl(page.url) | slice(0, 5) %}
+  {% else %}
+    {% set otherNotes = collections.notes | reverse | excludeItemByUrl(page.url) | slice(0, 5) %}
+  {% endif %}
 
-    {% if otherNotes.length %}
+  {% if otherNotes.length %}
+    <section class="notes-list">
+      <h2>Autres notes</h2>
       {% for note in otherNotes %}
         <div class="note-item">
           <a href="{{ note.url }}" class="note-title">{{ note.data.title }}</a>
           <span class="note-date">{{ note.date | formatDate }}</span>
         </div>
       {% endfor %}
-    {% endif %}
-  </div>
+    </section>
+  {% endif %}
 
   <footer class="footer">
     <a href="/" class="back-link">← Retour</a>
