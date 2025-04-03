@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - Digital Garden</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        nav {
+            background: #2c3e50;
+            margin: -2rem -2rem 2rem -2rem;
+            padding: 1rem 2rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 2rem;
+            font-size: 1.2rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .note {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        .note-date {
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/notes">Notes</a>
+        <a href="/labo">Labo</a>
+    </nav>
+    <main>
+        {{ content | safe }}
+    </main>
+</body>
+</html>

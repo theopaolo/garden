@@ -1,1 +1,0 @@
-Première graine de printemps.

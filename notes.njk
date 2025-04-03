@@ -1,0 +1,22 @@
+---
+layout: base.njk
+title: Notes
+permalink: /notes/all/
+---
+
+<h1>Notes</h1>
+
+<p>Debug info:</p>
+<pre>
+Number of notes: {{ collections.notes | length }}
+</pre>
+
+<ul>
+{% for note in collections.notes %}
+    <li>
+        <strong>{{ note.data.title }}</strong>
+        <br>
+        File: {{ note.inputPath }}
+    </li>
+{% endfor %}
+</ul>
