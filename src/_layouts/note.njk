@@ -23,7 +23,7 @@ layout: base.njk
   {% if page.url.startsWith('/labo/') %}
     {% set otherNotes = collections.labo | reverse | excludeItemByUrl(page.url) | slice(0, 5) %}
   {% else %}
-    {% set otherNotes = collections.notes | reverse | excludeItemByUrl(page.url) | slice(0, 5) %}
+    {% set otherNotes = collections.notes | reverse | excludeItemByUrl(page.url) | slice(0, 5) | rejectattr("data.layout", "equalto", "base.njk") %}
   {% endif %}
 
   {% if otherNotes.length %}
