@@ -24,8 +24,13 @@ module.exports = function(eleventyConfig) {
 
     // Add collections for notes
     eleventyConfig.addCollection("notes", function(collectionApi) {
+        // Use a more specific glob pattern and ignore .git directory
         return collectionApi.getFilteredByGlob("src/notes/**/*.md")
-            .filter(item => !item.inputPath.includes("/.trash/"));
+        .filter(item =>
+          !item.inputPath.includes("/.trash/") &&
+          !item.inputPath.includes("/.obsidian/") &&
+          !item.inputPath.includes(".DS_Store")
+        );
     });
 
     eleventyConfig.addCollection("rootNotes", function(collectionApi) {
