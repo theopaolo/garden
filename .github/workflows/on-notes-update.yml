@@ -1,0 +1,9 @@
+name: Deploy when notes are updated
+
+on:
+  repository_dispatch:
+    types: [notes-updated]
+
+jobs:
+  build-and-deploy:
+    uses: ./.github/workflows/deploy.yml
