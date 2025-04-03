@@ -1,0 +1,191 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+:root {
+    --text-color: #2d3436;
+    --text-color-light: #666;
+    --background-color: #ffffff;
+    --border-color: #eee;
+    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --max-width: 650px;
+}
+
+body {
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.intro h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.intro p {
+    margin: 1rem 0 0;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.note-date {
+    color: var(--text-color-light);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* Notes list styles */
+.notes-list {
+    margin: 0 auto;
+    width: 100%;
+    flex: 1;
+}
+
+.note-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.note-title {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.note-title:hover {
+    color: var(--text-color-light);
+}
+
+/* Individual note page styles */
+.note-content {
+    flex: 1;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+.note-content p {
+    margin: 1.5rem 0;
+}
+
+.note-content a {
+    color: var(--text-color);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+.note-content a:hover {
+    color: var(--text-color-light);
+}
+
+/* Tags */
+.note-tags {
+    margin-bottom: 4rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    font-size: 0.8rem;
+    color: var(--text-color-light);
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+}
+
+.tag:hover {
+    background: var(--border-color);
+}
+
+/* Footer styles */
+.footer {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    text-align: left;
+}
+
+.back-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.back-link:hover {
+    color: var(--text-color-light);
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 2rem 1rem;
+    }
+
+    .intro {
+        margin-bottom: 2rem;
+    }
+
+    .intro h1 {
+        font-size: 1.75rem;
+    }
+
+    .note-content {
+        font-size: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .note-tags {
+        margin-bottom: 3rem;
+    }
+
+    .footer {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+    }
+}
