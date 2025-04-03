@@ -1,0 +1,3 @@
+[submodule "src/notes"]
+	path = src/notes
+	url = https://github.com/theopaolo/notes.git
