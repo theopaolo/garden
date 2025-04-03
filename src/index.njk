@@ -10,18 +10,21 @@ title: Notes
     <p> Rédiger par Théo GS, développeur, designer, artiste et des fois enseignant.</p>
   </div>
 
- {% if collections.notes.length %}
-  <ul>
-    {% for note in collections.notes %}
+  <ul class="notes-list">
+    {% set allNotes = collections.notes %}
+    {% if allNotes.length > 0 %}
+      {% for note in allNotes | reverse %}
       <li>
-        <a href="{{ note.url }}">{{ note.data.title or "Sans titre" }}</a>
-        <small>({{ note.date | formatDate }})</small>
+          <a href="{{ note.url }}" class="note-item">
+              <span class="note-title">{{ note.data.title }}</span>
+              <span class="note-date">{{ note.date | formatDate }}</span>
+          </a>
       </li>
-    {% endfor %}
+      {% endfor %}
+    {% else %}
+      <p>No notes found.</p>
+    {% endif %}
   </ul>
-{% else %}
-  <p>🌱 Aucune note pour l’instant.</p>
-{% endif %}
 
   <footer class="footer">
     <p>Un jardin cultivé en permacomputing, d'idées, notes et expériences.</p>

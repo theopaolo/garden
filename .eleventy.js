@@ -1,4 +1,7 @@
 module.exports = function(eleventyConfig) {
+    // Ignore specific directories
+    eleventyConfig.ignores.add("src/notes/.trash/**");
+
     // Copy static assets to the output
     eleventyConfig.addPassthroughCopy("src/css");
     eleventyConfig.addPassthroughCopy("src/img");
@@ -24,18 +27,26 @@ module.exports = function(eleventyConfig) {
 
     // Add collections for notes
     eleventyConfig.addCollection("notes", function(collectionApi) {
-        // Use a more specific glob pattern and ignore .git directory
-        return collectionApi.getFilteredByGlob("src/notes/**/*.md")
-        .filter(item =>
-          !item.inputPath.includes("/.trash/") &&
-          !item.inputPath.includes("/.obsidian/") &&
-          !item.inputPath.includes(".DS_Store")
-        );
+        return collectionApi.getFilteredByGlob(["src/notes/**/*.md", "!src/notes/.trash/**", "!src/notes/.obsidian/**"])
+            .filter(item => {
+                // Exclude files from special directories
+                if (item.inputPath.includes(".trash") ||
+                    item.inputPath.includes(".obsidian") ||
+                    item.inputPath.includes(".git")) {
+                    return false;
+                }
+                // Make sure the file has required frontmatter
+                return item.data.title && item.data.date;
+            });
     });
 
     eleventyConfig.addCollection("rootNotes", function(collectionApi) {
         return collectionApi.getFilteredByGlob("src/notes/*.md")
-            .filter(item => !item.inputPath.includes("/.trash/"));
+            .filter(item =>
+                !item.inputPath.includes("/.trash/") &&
+                !item.url.endsWith("/") &&
+                item.url.startsWith("/notes/")
+            );
     });
 
     eleventyConfig.addCollection("laboNotes", function(collectionApi) {
