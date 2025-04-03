@@ -1,9 +1,10 @@
 module.exports = function(eleventyConfig) {
 
+
     // Copy static assets to the output
     eleventyConfig.addPassthroughCopy("src/css");
     eleventyConfig.addPassthroughCopy("src/img");
-
+    eleventyConfig.addPassthroughCopy("src/js");
     // Add date formatting filter
     eleventyConfig.addFilter("formatDate", function(date) {
         return new Date(date).toLocaleDateString('fr-FR', {

@@ -4,11 +4,11 @@ layout: base.njk
 
 <main class="container">
   <div class="intro">
-    <h1>{{ title }}</h1>
+    <h1 view-transition-name="page-title">{{ title }}</h1>
     <div class="note-date">{{ date | formatDate }}</div>
   </div>
 
-  <article class="note-content">
+  <article class="note-content" view-transition-name="note-content">
     {{ content | safe }}
   </article>
 
