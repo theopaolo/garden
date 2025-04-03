@@ -1,0 +1,43 @@
+---
+layout: base.njk
+---
+
+<main class="container">
+  <div class="intro">
+    <h1>{{ title }}</h1>
+    <div class="note-date">{{ date | formatDate }}</div>
+  </div>
+
+  <article class="note-content">
+    {{ content | safe }}
+  </article>
+
+  {% if tags %}
+  <div class="note-tags">
+    {% for tag in tags %}
+      <a href="/tags/{{ tag | slug }}/" class="tag">{{ tag }}</a>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <div class="notes-list">
+    {% if page.url.startsWith('/labo/') %}
+      {% set otherNotes = collections.labo | reverse | excludeItemByUrl(page.url) | slice(0, 5) %}
+    {% else %}
+      {% set otherNotes = collections.notes | reverse | excludeItemByUrl(page.url) | slice(0, 5) %}
+    {% endif %}
+
+    {% if otherNotes.length %}
+      {% for note in otherNotes %}
+        <div class="note-item">
+          <a href="{{ note.url }}" class="note-title">{{ note.data.title }}</a>
+          <span class="note-date">{{ note.date | formatDate }}</span>
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+
+  <footer class="footer">
+    <a href="/" class="back-link">← Retour</a>
+  </footer>
+</main>

@@ -1,0 +1,29 @@
+---
+layout: base.njk
+title: All Notes
+---
+
+<h1>All Notes</h1>
+
+<div class="notes-list">
+    {% for note in collections.notes | reverse %}
+    <div class="note">
+        <h2><a href="{{ note.url }}">{{ note.data.title }}</a></h2>
+        <div class="note-date">{{ note.date | formatDate }}</div>
+
+        {% if note.data.description %}
+            <p>{{ note.data.description }}</p>
+        {% endif %}
+
+        {% if note.data.tags %}
+        <div class="note-tags">
+            {% for tag in note.data.tags %}
+                <a href="/tags/{{ tag | slug }}/" class="tag">{{ tag }}</a>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+    {% else %}
+    <p>No notes found.</p>
+    {% endfor %}
+</div>

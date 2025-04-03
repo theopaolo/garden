@@ -1,0 +1,30 @@
+---
+layout: base.njk
+title: Notes
+---
+
+<main class="container">
+  <div class="intro">
+    <h1>Hello jardin numérique</h1>
+    <p>Ceci est une nouvelle tantative de journal numérique.</p>
+    <p> Rédiger par Théo GS, développeur, designer, artiste et des fois enseignant.</p>
+  </div>
+
+  <ul class="notes-list">
+    {% set allNotes = collections.notes | reverse %}
+    {% for note in allNotes %}
+    <li>
+        <a href="{{ note.url }}" class="note-item">
+            <span class="note-title">{{ note.data.title }}</span>
+            <span class="note-date">{{ note.date | formatDate }}</span>
+        </a>
+    </li>
+    {% else %}
+      <p>No notes found.</p>
+    {% endfor %}
+  </ul>
+
+  <footer class="footer">
+    <p>Un jardin cultivé en permacomputing, d'idées, notes et expériences.</p>
+  </footer>
+</main>

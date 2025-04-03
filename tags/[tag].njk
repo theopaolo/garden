@@ -1,0 +1,27 @@
+---
+layout: base.njk
+pagination:
+    data: collections.tagList
+    size: 1
+    alias: tag
+permalink: /tags/{{ tag | slug }}/
+eleventyComputed:
+    title: Notes tagged "{{ tag }}"
+---
+
+# Notes tagged "{{ tag }}"
+
+{% set taglist = collections[tag] %}
+{% if taglist | length %}
+    {% for note in taglist | reverse %}
+        <div class="note">
+            <h2><a href="{{ note.url }}">{{ note.data.title }}</a></h2>
+            <div class="note-date">{{ note.date | date: "%Y-%m-%d" }}</div>
+            {% if note.data.description %}
+                <p>{{ note.data.description }}</p>
+            {% endif %}
+        </div>
+    {% endfor %}
+{% else %}
+    <p>No notes found with this tag.</p>
+{% endif %}
