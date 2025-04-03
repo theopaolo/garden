@@ -11,10 +11,14 @@
             "id": "901718a233f0c523",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Bonjour jardin.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Bonjour jardin"
             }
           }
         ]
@@ -94,6 +98,7 @@
         "state": {
           "type": "backlink",
           "state": {
+            "file": "Bonjour jardin.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -112,6 +117,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
+            "file": "Bonjour jardin.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           },
@@ -125,6 +131,7 @@
         "state": {
           "type": "outline",
           "state": {
+            "file": "Bonjour jardin.md",
             "followCursor": false,
             "showSearch": false,
             "searchQuery": ""
@@ -147,5 +154,7 @@
     }
   },
   "active": "901718a233f0c523",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "Bonjour jardin.md"
+  ]
 }
