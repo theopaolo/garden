@@ -1,6 +1,4 @@
 module.exports = function(eleventyConfig) {
-    // Ignore specific directories
-    eleventyConfig.ignores.add("src/notes/.trash/**");
 
     // Copy static assets to the output
     eleventyConfig.addPassthroughCopy("src/css");
@@ -26,18 +24,28 @@ module.exports = function(eleventyConfig) {
     });
 
     // Add collections for notes
-    eleventyConfig.addCollection("notes", function(collectionApi) {
-        return collectionApi.getFilteredByGlob(["src/notes/**/*.md", "!src/notes/.trash/**", "!src/notes/.obsidian/**"])
-            .filter(item => {
-                // Exclude files from special directories
-                if (item.inputPath.includes(".trash") ||
-                    item.inputPath.includes(".obsidian") ||
-                    item.inputPath.includes(".git")) {
-                    return false;
-                }
-                // Make sure the file has required frontmatter
-                return item.data.title && item.data.date;
-            });
+    eleventyConfig.addCollection("notes", function (collectionApi) {
+        return collectionApi
+        .getFilteredByGlob([
+            "src/notes/**/*.md",
+            "!src/notes/.trash/**",
+            "!src/notes/.obsidian/**"
+        ])
+        .filter((item) => {
+            const path = item.inputPath;
+
+            // Skip system/hidden folders
+            if (
+            path.includes("/.trash/") ||
+            path.includes("/.obsidian/") ||
+            path.includes("/.git/")
+            ) {
+            return false;
+            }
+
+            // Only keep valid notes
+            return item.data.title && (item.data.date || item.date);
+        });
     });
 
     eleventyConfig.addCollection("rootNotes", function(collectionApi) {
