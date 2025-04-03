@@ -1,34 +1,27 @@
 /* Reset */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    height: 100%;
-}
-
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
+@import url('./fonts.css');
 
 :root {
     --text-color: #2d3436;
     --text-color-light: #666;
     --background-color: #ffffff;
     --border-color: #eee;
+    --accent-color: #ff8a5b;
+    --accent-bg: #fef5f1;
     --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --max-width: 650px;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #ffffff;
+        --text-color-light: #666;
+        --background-color: #1a1a1a;
+        --border-color: #333;
+        --accent-color: #ffa27d;
+        --accent-bg: #2b2b2b;
+    }
 }
 
 body {
@@ -40,11 +33,25 @@ body {
     background-color: var(--background-color);
 }
 
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
 .container {
     max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 4rem 1.5rem;
-    min-height: 100vh;
+    min-height: calc(100vh - 4rem);
+    margin: 2rem auto;
     display: flex;
     flex-direction: column;
 }
@@ -52,6 +59,11 @@ body {
 .intro {
     margin-bottom: 3rem;
     text-align: center;
+}
+
+.intro p {
+    color: var(--text-color-light);
+    font-style: italic;
 }
 
 .intro h1 {
@@ -74,6 +86,11 @@ body {
 }
 
 /* Notes list styles */
+
+ul.notes-list  {
+    padding: 0;
+}
+
 .notes-list {
     margin: 0 auto;
     width: 100%;
@@ -86,6 +103,7 @@ body {
     align-items: baseline;
     padding: 1rem 0;
     border-bottom: 1px solid var(--border-color);
+    transition: background 0.2s ease;
 }
 
 .note-title {
@@ -96,6 +114,7 @@ body {
 
 .note-title:hover {
     color: var(--text-color-light);
+    background-color: var(--accent-bg);
 }
 
 /* Individual note page styles */
@@ -133,11 +152,12 @@ body {
 
 .tag {
     font-size: 0.8rem;
-    color: var(--text-color-light);
-    text-decoration: none;
-    padding: 0.25rem 0.5rem;
-    border: 1px solid var(--border-color);
-    border-radius: 3px;
+    color: var(--accent-color);
+    background: var(--accent-bg);
+    padding: 0.25rem 0.7rem;
+    border-radius: 9999px;
+    border: none;
+    transition: background 0.2s ease;
 }
 
 .tag:hover {
@@ -160,6 +180,48 @@ body {
 
 .back-link:hover {
     color: var(--text-color-light);
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: fade 0.3s ease;
+}
+
+@keyframes fade {
+  from { opacity: 0.5; }
+  to   { opacity: 1; }
+}
+
+::view-transition-old(note-content),
+::view-transition-new(note-content) {
+  animation: fade-up 0.4s ease;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+::view-transition-old(page-title),
+::view-transition-new(page-title) {
+  animation: scale-in 0.3s ease;
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @media (max-width: 640px) {
