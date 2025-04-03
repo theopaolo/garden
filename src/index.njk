@@ -11,19 +11,19 @@ title: Notes
   </div>
 
   <ul class="notes-list">
-    {% set allNotes = collections.notes %}
-    {% if allNotes.length > 0 %}
-      {% for note in allNotes | reverse %}
+    {% set allNotes = collections.notes | reverse %}
+    {% for note in allNotes %}
+      {% if note.data.layout != "base.njk" %}
       <li>
-          <a href="{{ note.url }}" class="note-item">
-              <span class="note-title">{{ note.data.title }}</span>
-              <span class="note-date">{{ note.date | formatDate }}</span>
-          </a>
+        <a href="{{ note.url }}" class="note-item">
+          <span class="note-title">{{ note.data.title or "Sans titre" }}</span>
+          <span class="note-date">{{ note.date | formatDate }}</span>
+        </a>
       </li>
-      {% endfor %}
+      {% endif %}
     {% else %}
-      <p>No notes found.</p>
-    {% endif %}
+      <p>🌱 Aucune note pour l’instant.</p>
+    {% endfor %}
   </ul>
 
   <footer class="footer">
