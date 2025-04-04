@@ -3,7 +3,7 @@
 
 :root {
     --text-color: #5C4B75;
-    --text-color-light: #7B6A8D;
+    --text-color-light: #7b4f88;
     --background-color: #FFF7FB;
     --border-color: #F2A9E1;
     --accent-color: #FF66C4;
@@ -167,9 +167,14 @@ ul.notes-list  {
     color: var(--text-color-light);
 }
 
+.note-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 /* Tags */
 .note-tags {
-    margin-bottom: 4rem;
     display: flex;
     gap: 0.5rem;
     flex-wrap: wrap;
@@ -177,33 +182,47 @@ ul.notes-list  {
 
 .tag {
     font-size: 0.8rem;
-    color: var(--accent-color);
-    background: var(--accent-bg);
+    color:  var(--text-color);
+    background:var(--accent-bg) ;
     padding: 0.25rem 0.7rem;
     border-radius: 9999px;
     border: none;
     transition: background 0.2s ease;
 }
 
-.tag:hover {
-    background: var(--border-color);
-}
-
 /* Footer styles */
 .footer {
     border-top: 1px solid var(--border-color);
-    text-align: left;
     margin-top: 4rem;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer p {
+    margin: 0;
+    line-height: 1.2;
+    flex: 1;
 }
 
 .back-link {
+    background: var(--accent-bg);
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
     color: var(--text-color);
     text-decoration: none;
     font-size: 0.9rem;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
 }
 
 .back-link:hover {
-    color: var(--text-color-light);
+    background: var(--accent-bg);
+    color: var(--text-color);
+    transition: all 0.2s ease;
+    border: 1px solid var(--accent-color);
 }
 
     ::view-transition-old(root),
@@ -272,5 +291,10 @@ ul.notes-list  {
 
     .footer {
         margin-top: 2rem;
+    }
+
+    .footer p {
+        width: 100%;
+        flex: auto;
     }
 }

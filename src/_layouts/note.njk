@@ -5,7 +5,15 @@ layout: base.njk
 <main class="container">
   <div class="intro">
     <h1 view-transition-name="page-title">{{ title }}</h1>
-    <div class="note-date" view-transition-name="note-date">{{ date | formatDate }}</div>
+
+    <div class="note-data">
+      <div class="note-date" view-transition-name="note-date">{{ date | formatDate }}</div>
+      <div class="note-tags">
+        {% for tag in tags %}
+          <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    </div>
   </div>
 
   <article class="note-content" view-transition-name="note-content">
