@@ -1,31 +1,31 @@
 @font-face {
     font-family: 'Fragment Sans';
-    src: url('/fonts/PPFragment-SansRegular.woff2') format('woff2'),
-         url('/fonts/PPFragment-SansRegular.woff') format('woff');
+    src: url('../fonts/PPFragment-SansRegular.woff2') format('woff2'),
+         url('../fonts/PPFragment-SansRegular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Fragment Sans';
-    src: url('/fonts/PPFragment-SansRegularItalic.woff2') format('woff2'),
-         url('/fonts/PPFragment-SansRegularItalic.woff') format('woff');
+    src: url('../fonts/PPFragment-SansRegularItalic.woff2') format('woff2'),
+         url('../fonts/PPFragment-SansRegularItalic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Fragment Glare';
-    src: url('/fonts/PPFragment-GlareRegular.woff2') format('woff2'),
-         url('/fonts/PPFragment-GlareRegular.woff') format('woff');
+    src: url('../fonts/PPFragment-GlareRegular.woff2') format('woff2'),
+         url('../fonts/PPFragment-GlareRegular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Fragment Glare';
-    src: url('/fonts/PPFragment-GlareRegularItalic.woff2') format('woff2'),
-         url('/fonts/PPFragment-GlareRegularItalic.woff') format('woff');
+    src: url('../fonts/PPFragment-GlareRegularItalic.woff2') format('woff2'),
+         url('../fonts/PPFragment-GlareRegularItalic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
 }

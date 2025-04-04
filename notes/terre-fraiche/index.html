@@ -3,20 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="My Digital Garden - A space for thoughts, notes, and ideas">
-    <meta name="theme-color" content="#000000">
-    <title>C&#39;est en ligne | My Digital Garden</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Un jardin numérique cultivé par Théo.">
+    <meta name="theme-color" content="#5C4B75">
+    <title>C&#39;est en ligne</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
 </head>
 <body>
     
 <main class="container">
   <div class="intro">
     <h1 view-transition-name="page-title">C&#39;est en ligne</h1>
-    <div class="note-date">3 avril 2025</div>
+    <div class="note-date" view-transition-name="note-date">3 avril 2025</div>
   </div>
 
   <article class="note-content" view-transition-name="note-content">
@@ -30,31 +28,27 @@ Pas encore de fleurs, ni d’abeilles.</p>
   </article>
 
   
-  <div class="note-tags">
-    
-      <a href="/tags/flux/" class="tag">flux</a>
-    
-  </div>
-  
-
-  
     
   
 
   
-    <section class="notes-list">
-      <h2>Autres notes</h2>
-      
-        <div class="note-item">
-          <a href="/notes/et-encore-un-de-plus/" class="note-title">Encore une site</a>
-          <span class="note-date">3 avril 2025</span>
-        </div>
-      
+    <section class="notes-list" view-transition-name="notes-list">
+      <h2 class="notes-list-title" view-transition-name="notes-list-title">Autres graines</h2>
+      <ul class="notes-list">
+        
+          <li>
+            <a href="/notes/et-encore-un-de-plus/" class="note-item">
+              <span class="note-title">Encore une site</span>
+              <span class="note-date">3 avril 2025</span>
+            </a>
+          </li>
+        
+      </ul>
     </section>
   
 
-  <footer class="footer">
-    <a href="/" class="back-link">← Retour</a>
+  <footer class="footer" view-transition-name="footer">
+    <a href="/" class="back-link">← Retour à l'Index</a>
   </footer>
 </main>
     <script type="module" src="/js/transitions.js"></script>

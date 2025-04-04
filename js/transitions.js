@@ -1,28 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("transitions.js loaded");
-
   if ("navigation" in window && document.startViewTransition) {
-    console.log("Navigation API & ViewTransition supported");
-
     navigation.addEventListener("navigate", (event) => {
-      // Don't intercept links to external domains or with target attributes
       const toUrl = new URL(event.destination.url);
       if (toUrl.origin !== location.origin) return;
 
       event.intercept({
-        handler: () =>
+        handler: async () => {
           document.startViewTransition(async () => {
-            const response = await fetch(event.destination.url);
-            const text = await response.text();
-            const html = new DOMParser().parseFromString(text, "text/html");
+            try {
+              await new Promise(resolve => setTimeout(resolve, 300));
 
-            // Replace only the <main> content
-            const newMain = html.querySelector("main");
-            document.querySelector("main").replaceWith(newMain);
+              const response = await fetch(event.destination.url);
+              const text = await response.text();
+              const html = new DOMParser().parseFromString(text, "text/html");
 
-            // Optionally update title
-            document.title = html.title;
-          }),
+              const newMain = html.querySelector("main");
+              document.querySelector("main").replaceWith(newMain);
+
+              document.title = html.title;
+            } catch (error) {
+              console.error("Transition failed:", error);
+            }
+          });
+        },
       });
     });
   } else {
