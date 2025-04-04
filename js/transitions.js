@@ -18,6 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
               document.querySelector("main").replaceWith(newMain);
 
               document.title = html.title;
+
+              window.scrollTo(0, 0);
+              
             } catch (error) {
               console.error("Transition failed:", error);
             }
