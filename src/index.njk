@@ -1,15 +1,19 @@
 ---
 layout: base.njk
-title: Notes
+title: Jardin de Théo
 ---
 
 <main class="container">
   <div class="intro">
     <h1>Hello jardin numérique</h1>
-    <p>Ceci est une nouvelle tantative de journal numérique.</p>
-    <p> Rédiger par Théo GS, développeur, designer, artiste et des fois enseignant.</p>
+    <p>Ce site est une nouvelle tentative de développer et entretenir un <i>jardin numérique</i>.</p>
+    <p>Cultivé par Théo — développeur, designer, artiste, et parfois enseignant.</p>
+    <p>On y plantera des idées, des réflexions et des expérimentations.</p>
+    <br>
+    <p>Bienvenue si tu tombes sur ce site ッ</p>
   </div>
 
+  <h2 class="notes-list-title">Dernières graines</h2>
   <ul class="notes-list">
     {% set allNotes = collections.notes | reverse %}
     {% for note in allNotes %}
@@ -27,7 +31,8 @@ title: Notes
   </ul>
 
   <footer class="footer">
-    <p>Un jardin cultivé en permacomputing, d'idées, notes et expériences.</p>
+    <p>Un jardin cultivé en permacomputing.</p>
+    <p>On peut me retrouver : <a href="https://bsky.app/profile/theogs.bsky.social">bsky</a>, <a href="https://www.are.na/theo-paolo/channels">are.na</a> et  <a href="https://twigg.social/@theo"> <img src="/img/twigg.svg" alt="twigg" class="twigg-icon" width="14" height="14">twigg</a></p>
     <p class="build-info">Dernière germination : {{ site.buildTime | formatDate }}</p>
   </footer>
 </main>

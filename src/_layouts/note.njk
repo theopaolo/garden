@@ -5,20 +5,12 @@ layout: base.njk
 <main class="container">
   <div class="intro">
     <h1 view-transition-name="page-title">{{ title }}</h1>
-    <div class="note-date">{{ date | formatDate }}</div>
+    <div class="note-date" view-transition-name="note-date">{{ date | formatDate }}</div>
   </div>
 
   <article class="note-content" view-transition-name="note-content">
     {{ content | safe }}
   </article>
-
-  {% if tags %}
-  <div class="note-tags">
-    {% for tag in tags %}
-      <a href="/tags/{{ tag | slug }}/" class="tag">{{ tag }}</a>
-    {% endfor %}
-  </div>
-  {% endif %}
 
   {% if page.url.startsWith('/labo/') %}
     {% set otherNotes = collections.labo | reverse | excludeItemByUrl(page.url) | slice(0, 5) %}
@@ -27,18 +19,24 @@ layout: base.njk
   {% endif %}
 
   {% if otherNotes.length %}
-    <section class="notes-list">
-      <h2>Autres notes</h2>
-      {% for note in otherNotes %}
-        <div class="note-item">
-          <a href="{{ note.url }}" class="note-title">{{ note.data.title }}</a>
-          <span class="note-date">{{ note.date | formatDate }}</span>
-        </div>
-      {% endfor %}
+    <section class="notes-list" view-transition-name="notes-list">
+      <h2 class="notes-list-title" view-transition-name="notes-list-title">Autres graines</h2>
+      <ul class="notes-list">
+        {% for note in otherNotes %}
+          <li>
+            <a href="{{ note.url }}" class="note-item">
+              <span class="note-title">{{ note.data.title or "Sans titre" }}</span>
+              <span class="note-date">{{ note.date | formatDate }}</span>
+            </a>
+          </li>
+        {% else %}
+          <p>🌱 Aucune note pour l'instant.</p>
+        {% endfor %}
+      </ul>
     </section>
   {% endif %}
 
-  <footer class="footer">
-    <a href="/" class="back-link">← Retour</a>
+  <footer class="footer" view-transition-name="footer">
+    <a href="/" class="back-link">← Retour à l'Index</a>
   </footer>
 </main>

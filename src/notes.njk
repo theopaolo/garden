@@ -15,13 +15,6 @@ title: All Notes
             <p>{{ note.data.description }}</p>
         {% endif %}
 
-        {% if note.data.tags %}
-        <div class="note-tags">
-            {% for tag in note.data.tags %}
-                <a href="/tags/{{ tag | slug }}/" class="tag">{{ tag }}</a>
-            {% endfor %}
-        </div>
-        {% endif %}
     </div>
     {% else %}
     <p>No notes found.</p>
