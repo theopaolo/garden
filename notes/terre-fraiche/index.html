@@ -26,69 +26,14 @@
   </div>
 
   <article class="note-content" view-transition-name="note-content">
-    <p>Ce jardin numérique prend doucement vie
-Les fondations techniques sont posées, et il est prêt à accueillir ses premières pousses.</p>
-<p>La base technique (la “stack”):
-J’ai choisi un générateur de site statique appelé 11ty (ou Eleventy). Il est léger, rapide et simple à utiliser.
-Les contenus sont rédigés en Markdown, un format de texte très lisible et facile à apprendre.</p>
-<p>Une rédaction simplifié :
-Pour rédiger, j’utilise Obsidian, un éditeur de notes avec app mobile desktop. Il est populaire, personnalisable, et surtout :
-– Il comprend le frontmatter (des métadonnées en haut des fichiers) utilisé par 11ty,
-– Il permet de travailler hors ligne, avec les fichiers stockés localement sur mes appareils.</p>
-<p>J’ai organisé mon projet en deux parties :
-Un dépôt Git pour le contenu (les notes),
-Un autre dépôt pour le site web (le code 11ty).
-Cela me permet de maintenir une séparation entre contenu et contenant.
-Chaque fois que je modifie mes notes, une GitHub Action s’enclenche :
-Elle clone le dépôt de notes,
-Intègre ces fichiers dans le projet 11ty,
-Génère le site à jour,
-Et le publie automatiquement sur jardin.ludique.dev.</p>
-<p>J’avais testé les Git submodules, mais j'ai rapidement rencontré des soucis de synchronisation.
-Avec cette nouvelle méthode, c'est plus fluide.
-Je pousse mes notes → GitHub fait le reste.</p>
-<hr>
-<p>Résultat ?
-Un processus automatisé, fiable, élégant.
-Presque magique.</p>
-<hr>
-<p>`+-------------------------+
-| 1. Édition des notes    |
-|    (Obsidian, local)    |
-+-----------+-------------+
-|
-| git push
-v
-+-----------+-------------+
-| 2. Dépôt GIT 'Contenu'  | ----+
-|    (GitHub)             |     | 3. Push -&gt; Déclenche notif.
-+-------------------------+     |
-v
-+-------------------------+ &lt;---+
-| 4. Dépôt GIT 'SSG'      |
-|    (Code 11ty, GitHub)  | ----+
-|    (Reçoit notif.)      |     | 5. Notif. -&gt; Déclenche Action
-+-------------------------+     v
-+---------+---------------+
-| 6. GitHub Action (SSG)  |
-|-------------------------|
-|  a. Clone Dépôt Contenu |
-|  b. Build (11ty)        |
-|  c. Deploy site         |
-+---------+---------------+
-| 7. Déploiement vers...
-v
-+---------+---------------+
-| 8. GitHub Pages         |
-| (jardin.ludique.dev)    |
-+---------+---------------+
-| 9. Site accessible par...
-v
-+---------+---------------+
-| Visiteur                |
-+-------------------------+</p>
-<p>*Note: La notification est souvent gérée par une petite action sur le dépôt 'Contenu' qui en déclenche une plus grosse sur le dépôt 'SSG'.
-`</p>
+    <p>Ce jardin numérique prend doucement vie. Les fondations techniques sont en place, prêtes à accueillir les premières pousses.</p>
+<p>La stack technique est posée :
+Un générateur de site statique (SSG) avec 11ty (eleventy), choisi pour sa simplicité et ses performances. Le contenu est rédigé en Markdown.</p>
+<p>Pour l'édition, n'importe quel éditeur Markdown ferait l'affaire. Personnellement, j'ai opté pour Obsidian (avec applications mobile et desktop). C'est un éditeur très flexible et populaire, qui interprète nativement le frontmatter utilisé par 11ty. Cela me permet d'écrire et d'ajouter des métadonnées facilement depuis un ordinateur ou un téléphone.</p>
+<p>Un autre avantage est que mes notes sont également accessibles hors ligne, stockées localement sur mes appareils, et la synchronisation se fait via GitHub. Les notes ont leur propre dépôt Git, séparé du code du site. Pour les rendre accessibles à 11ty au moment du build, une GitHub Action commence par cloner ce dépôt de notes directement dans le répertoire source du projet 11ty.</p>
+<p>De cette façon, je peux séparer le contenu (les notes) du contenant (le code du site). Dans mon cas, cette méthode s'est avérée plus efficace à gérer au niveau de l'intégration continue (CI/CD) que l'utilisation de Git submodules, qui posait des soucis de versions de modules pas à jour avec l'état du contenu.</p>
+<p>Ainsi, à chaque push de nouvelles notes ou sur le dépôt Git du contenu, une GitHub Action se déclenche pour notifier le dépôt SSG. Ce dernier clone le contenu et construit l'intégralité du site avec 11ty, puis le déploie sur une GitHub Page accessible via l'adresse jardin.ludique.dev.</p>
+<p>Le processus, une fois en place, semble presque magique !</p>
 
   </article>
 
