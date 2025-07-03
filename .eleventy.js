@@ -1,102 +1,125 @@
-module.exports = function(eleventyConfig) {
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
-
-    // Copy static assets to the output
-    eleventyConfig.addPassthroughCopy("src/css");
-    eleventyConfig.addPassthroughCopy("src/img");
-    eleventyConfig.addPassthroughCopy("src/js");
-    eleventyConfig.addPassthroughCopy("src/fonts");
-    // Add date formatting filter
-    eleventyConfig.addFilter("formatDate", function(date) {
-        return new Date(date).toLocaleDateString('fr-FR', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-        });
+module.exports = function (eleventyConfig) {
+  // Copy static assets to the output
+  eleventyConfig.addPassthroughCopy("src/css");
+  eleventyConfig.addPassthroughCopy("src/img");
+  eleventyConfig.addPassthroughCopy("src/js");
+  eleventyConfig.addPassthroughCopy("src/fonts");
+  // Add date formatting filter
+  eleventyConfig.addFilter("formatDate", function (date) {
+    return new Date(date).toLocaleDateString("fr-FR", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
     });
+  });
 
-    // Add keys filter
-    eleventyConfig.addFilter("keys", function(obj) {
-        return Object.keys(obj);
-    });
+  // Add keys filter
+  eleventyConfig.addFilter("keys", function (obj) {
+    return Object.keys(obj);
+  });
 
-    // Add slice filter
-    eleventyConfig.addFilter("slice", function(array, start, end) {
-        return array.slice(start, end);
-    });
+  // Add slice filter
+  eleventyConfig.addFilter("slice", function (array, start, end) {
+    return array.slice(start, end);
+  });
 
-    // Add collections for notes
-    eleventyConfig.addCollection("notes", function (collectionApi) {
-        return collectionApi
-        .getFilteredByGlob([
-            "src/notes/**/*.md",
-            "!src/notes/.trash/**",
-            "!src/notes/.obsidian/**"
-        ])
-        .filter((item) => {
-            const path = item.inputPath;
+  // Add collections for notes
+  eleventyConfig.addCollection("notes", function (collectionApi) {
+    return collectionApi
+      .getFilteredByGlob([
+        "src/notes/**/*.md",
+        "!src/notes/.trash/**",
+        "!src/notes/.obsidian/**",
+      ])
+      .filter((item) => {
+        const path = item.inputPath;
 
-            // Skip system/hidden folders and navigation pages
-            if (
-                path.includes("/.trash/") ||
-                path.includes("/.obsidian/") ||
-                path.includes("/.git/") ||
-                path.includes("/src/notes.njk") ||
-                path.includes("/src/tags.njk") ||
-                path.includes("/src/index.njk") ||
-                path.includes("/src/labo.njk") ||
-                item.data.layout === "base.njk"
-            ) {
-                return false;
-            }
-
-            // Only keep valid notes
-            return item.data.title && (item.data.date || item.date);
-        });
-    });
-
-    eleventyConfig.addCollection("rootNotes", function(collectionApi) {
-        return collectionApi.getFilteredByGlob("src/notes/*.md")
-            .filter(item =>
-                !item.inputPath.includes("/.trash/") &&
-                !item.url.endsWith("/") &&
-                item.url.startsWith("/notes/")
-            );
-    });
-
-    eleventyConfig.addCollection("laboNotes", function(collectionApi) {
-        return collectionApi.getFilteredByGlob("src/notes/labo/**/*.md")
-            .filter(item => !item.inputPath.includes("/.trash/"));
-    });
-
-    eleventyConfig.addFilter("excludeItemByUrl", (collection, urlToExclude) => {
-        if (!urlToExclude) {
-            return collection;
+        // Skip system/hidden folders and navigation pages
+        if (
+          path.includes("/.trash/") ||
+          path.includes("/.obsidian/") ||
+          path.includes("/.git/") ||
+          path.includes("/src/notes.njk") ||
+          path.includes("/src/tags.njk") ||
+          path.includes("/src/index.njk") ||
+          path.includes("/src/labo.njk") ||
+          item.data.layout === "base.njk"
+        ) {
+          return false;
         }
-        return collection.filter(item => item.url !== urlToExclude);
-    });
 
-    // Add tag collection
-    eleventyConfig.addCollection("tagList", function(collection) {
-        const tagSet = new Set();
-        collection.getAll().forEach(item => {
-            if ("tags" in item.data) {
-                let tags = item.data.tags;
-                if (typeof tags === "string") {
-                    tags = [tags];
-                }
-                tags.forEach(tag => tagSet.add(tag));
-            }
-        });
-        return [...tagSet];
-    });
+        // Only keep valid notes
+        return item.data.title && (item.data.date || item.date);
+      });
+  });
 
-    return {
-        dir: {
-            input: "src",
-            output: "_site",
-            includes: "_includes",
-            layouts: "_layouts"
+  eleventyConfig.addCollection("rootNotes", function (collectionApi) {
+    return collectionApi
+      .getFilteredByGlob("src/notes/*.md")
+      .filter(
+        (item) =>
+          !item.inputPath.includes("/.trash/") &&
+          !item.url.endsWith("/") &&
+          item.url.startsWith("/notes/")
+      );
+  });
+
+  eleventyConfig.addCollection("laboNotes", function (collectionApi) {
+    return collectionApi
+      .getFilteredByGlob("src/notes/labo/**/*.md")
+      .filter((item) => !item.inputPath.includes("/.trash/"));
+  });
+
+  eleventyConfig.addFilter("excludeItemByUrl", (collection, urlToExclude) => {
+    if (!urlToExclude) {
+      return collection;
+    }
+    return collection.filter((item) => item.url !== urlToExclude);
+  });
+
+  // Add tag collection
+  eleventyConfig.addCollection("tagList", function (collection) {
+    const tagSet = new Set();
+    collection.getAll().forEach((item) => {
+      if ("tags" in item.data) {
+        let tags = item.data.tags;
+        if (typeof tags === "string") {
+          tags = [tags];
         }
-    };
+        tags.forEach((tag) => tagSet.add(tag));
+      }
+    });
+    return [...tagSet];
+  });
+
+  eleventyConfig.addPlugin(pluginRss, {
+    type: "atom", // or "rss", "json"
+    outputPath: "/feed.xml",
+    collection: {
+      name: "notes", // iterate over `collections.notes`
+      limit: 10, // 0 means no limit
+    },
+    metadata: {
+      language: "fr",
+      title: "Jardin numérique",
+      subtitle:
+        "Cultivé par Théo — développeur, designer, artiste, et parfois enseignant.",
+      base: "https://jardin.ludique.dev",
+      author: {
+        name: "Théo",
+        email: "", // Optional
+      },
+    },
+  });
+
+  return {
+    dir: {
+      input: "src",
+      output: "_site",
+      includes: "_includes",
+      layouts: "_layouts",
+    },
+  };
 };
