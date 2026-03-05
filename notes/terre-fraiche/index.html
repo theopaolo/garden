@@ -8,24 +8,26 @@
     <title>C&#39;est en ligne</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+    <link rel="alternate" type="application/atom+xml" href="/feed.xml" title="Jardin numérique">
 </head>
 <body>
     
 <main class="container">
-  <div class="intro">
-    <h1 view-transition-name="page-title">C&#39;est en ligne</h1>
-
-    <div class="note-data">
-      <div class="note-date" view-transition-name="note-date">3 avril 2025</div>
-      <div class="note-tags">
-        
-          <span class="tag">tech</span>
-        
-      </div>
+  <header class="note-header">
+    <h1>C&#39;est en ligne</h1>
+    <div class="note-meta">
+      <time class="note-date">3 avril 2025</time>
+      
+        <div class="note-tags">
+          
+            <a href="/tags/tech/" class="tag">tech</a>
+          
+        </div>
+      
     </div>
-  </div>
+  </header>
 
-  <article class="note-content" view-transition-name="note-content">
+  <article class="note-content">
     <p>Ce jardin numérique prend doucement vie. Les fondations techniques sont en place, prêtes à accueillir les premières pousses.</p>
 <p>La stack technique est posée :
 Un générateur de site statique (SSG) avec 11ty (eleventy), choisi pour sa simplicité et ses performances. Le contenu est rédigé en Markdown.</p>
@@ -38,17 +40,20 @@ Un générateur de site statique (SSG) avec 11ty (eleventy), choisi pour sa simp
   </article>
 
   
-    
-  
 
   
-    <section class="notes-list" view-transition-name="notes-list">
-      <h2 class="notes-list-title" view-transition-name="notes-list-title">Autres graines</h2>
+    <aside>
+      <h2 class="notes-list-title">Autres graines</h2>
       <ul class="notes-list">
         
           <li>
             <a href="/notes/color-catchers/" class="note-item">
               <span class="note-title">Color Catchers</span>
+              
+                
+                  <span class="tag">flux</span>
+                
+              
               <span class="note-date">5 mars 2026</span>
             </a>
           </li>
@@ -56,6 +61,11 @@ Un générateur de site statique (SSG) avec 11ty (eleventy), choisi pour sa simp
           <li>
             <a href="/notes/web-drifting-as-a creative-practice/" class="note-item">
               <span class="note-title">Web drifting as a creative practice.</span>
+              
+                
+                  <span class="tag">flux</span>
+                
+              
               <span class="note-date">21 avril 2025</span>
             </a>
           </li>
@@ -63,6 +73,11 @@ Un générateur de site statique (SSG) avec 11ty (eleventy), choisi pour sa simp
           <li>
             <a href="/notes/derive-web-comme-pratique-creative/" class="note-item">
               <span class="note-title">À la dérive web</span>
+              
+                
+                  <span class="tag">flux</span>
+                
+              
               <span class="note-date">21 avril 2025</span>
             </a>
           </li>
@@ -70,18 +85,24 @@ Un générateur de site statique (SSG) avec 11ty (eleventy), choisi pour sa simp
           <li>
             <a href="/notes/et-encore-un-de-plus/" class="note-item">
               <span class="note-title">Encore une site</span>
+              
+                
+                  <span class="tag">flux</span>
+                
+              
               <span class="note-date">3 avril 2025</span>
             </a>
           </li>
         
       </ul>
-    </section>
+    </aside>
   
 
-  <footer class="footer" view-transition-name="footer">
-    <a href="/" class="back-link">← Retour à l'Index</a>
+  <footer class="footer">
+    <a href="/" class="back-link">← Retour</a>
   </footer>
 </main>
+
     <script type="module" src="/js/transitions.js"></script>
 </body>
 </html>
