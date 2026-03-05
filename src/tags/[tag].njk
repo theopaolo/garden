@@ -6,22 +6,29 @@ pagination:
     alias: tag
 permalink: /tags/{{ tag | slug }}/
 eleventyComputed:
-    title: Notes tagged "{{ tag }}"
+    title: "{{ tag }}"
 ---
 
-<h1>Notes tagged "{{ tag }}"</h1>
+<main class="container">
+  <header class="note-header">
+    <h1>{{ tag }}</h1>
+  </header>
 
-{% set taglist = collections[tag] %}
-{% if taglist | length %}
+  <ul class="notes-list">
+    {% set taglist = collections[tag] %}
     {% for note in taglist | reverse %}
-        <div class="note">
-            <h2><a href="{{ note.url }}">{{ note.data.title }}</a></h2>
-            <div class="note-date">{{ note.date | formatDate }}</div>
-            {% if note.data.description %}
-                <p>{{ note.data.description }}</p>
-            {% endif %}
-        </div>
+      <li>
+        <a href="{{ note.url }}" class="note-item">
+          <span class="note-title">{{ note.data.title or "Sans titre" }}</span>
+          <span class="note-date">{{ note.date | formatDate }}</span>
+        </a>
+      </li>
+    {% else %}
+      <li><p>Aucune note avec ce tag.</p></li>
     {% endfor %}
-{% else %}
-    <p>No notes found with this tag.</p>
-{% endif %}
+  </ul>
+
+  <footer class="footer">
+    <a href="/" class="back-link">← Retour</a>
+  </footer>
+</main>

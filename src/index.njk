@@ -4,16 +4,12 @@ title: Jardin de Théo
 ---
 
 <main class="container">
-  <div class="intro">
-    <h1>Hello jardin numérique</h1>
-    <p>Ce site est une nouvelle tentative de développer et entretenir un <i>jardin numérique</i>.</p>
-    <p>Cultivé par Théo — développeur, designer, artiste, et parfois enseignant.</p>
-    <p>On y plantera des idées, des réflexions et des expérimentations.</p>
-    <br>
-    <p>Bienvenue si tu tombes sur ce site ッ</p>
-  </div>
+  <header class="intro">
+    <h1>Jardin de Théo</h1>
+    <p>Ce jardin numérique est lentement cultivé par Théo [développeur, designer, artiste, et parfois enseignant].</p>
+    <p>Idées, réflexions et expérimentations. Bienvenue si tu tombes ici.</p>
+  </header>
 
-  <h2 class="notes-list-title">Dernières graines</h2>
   <ul class="notes-list">
     {% set allNotes = collections.notes | reverse %}
     {% for note in allNotes %}
@@ -21,18 +17,23 @@ title: Jardin de Théo
       <li>
         <a href="{{ note.url }}" class="note-item">
           <span class="note-title">{{ note.data.title or "Sans titre" }}</span>
+          {% if note.data.tags %}
+            {% for tag in note.data.tags %}
+              <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          {% endif %}
           <span class="note-date">{{ note.date | formatDate }}</span>
         </a>
       </li>
       {% endif %}
     {% else %}
-      <p>🌱 Aucune note pour l’instant.</p>
+      <li><p>Aucune note pour l'instant.</p></li>
     {% endfor %}
   </ul>
 
   <footer class="footer">
-    <p>Un jardin cultivé en permacomputing.</p>
-    <p>Me suivre sur : <br> <a href="https://bsky.app/profile/theogs.bsky.social">bsky</a>, <a href="https://www.are.na/theo-paolo/channels">are.na</a> et  <a href="https://twigg.social/@theo"> <img src="/img/twigg.svg" alt="twigg" class="twigg-icon" width="14" height="14">twigg</a></p>
-    <p class="build-info">Dernière germination : <br> {{ site.buildTime | formatDate }}</p>
+    <p>Journal entretenu en douceur et lentement?</p>
+    <p><a href="https://bsky.app/profile/theogs.bsky.social">bsky</a> · <a href="https://www.are.na/theo-paolo/channels">are.na</a></p>
+    <p>{{ site.buildTime | formatDate }}</p>
   </footer>
 </main>

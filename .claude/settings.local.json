@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install)",
+      "Bash(npx @11ty/eleventy)",
+      "Bash(npx @11ty/eleventy --serve --port 8081)",
+      "Bash(cp -R /Users/theogoedert/Documents/Webworks/notes src/notes)",
+      "Bash(rm -rf src/notes/.git)"
+    ]
+  }
+}

@@ -1,22 +1,34 @@
 ---
 layout: base.njk
-title: All Notes
+title: Notes
 ---
 
-<h1>All Notes</h1>
+<main class="container">
+  <header class="note-header">
+    <h1>Notes</h1>
+  </header>
 
-<div class="notes-list">
+  <ul class="notes-list">
     {% for note in collections.notes | reverse %}
-    <div class="note">
-        <h2><a href="{{ note.url }}">{{ note.data.title }}</a></h2>
-        <div class="note-date">{{ note.date | formatDate }}</div>
-
-        {% if note.data.description %}
-            <p>{{ note.data.description }}</p>
-        {% endif %}
-
-    </div>
+      {% if note.data.layout != "base.njk" %}
+      <li>
+        <a href="{{ note.url }}" class="note-item">
+          <span class="note-title">{{ note.data.title or "Sans titre" }}</span>
+          {% if note.data.tags %}
+            {% for tag in note.data.tags %}
+              <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          {% endif %}
+          <span class="note-date">{{ note.date | formatDate }}</span>
+        </a>
+      </li>
+      {% endif %}
     {% else %}
-    <p>No notes found.</p>
+      <li><p>Aucune note pour l'instant.</p></li>
     {% endfor %}
-</div>
+  </ul>
+
+  <footer class="footer">
+    <a href="/" class="back-link">← Retour</a>
+  </footer>
+</main>

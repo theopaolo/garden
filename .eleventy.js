@@ -6,6 +6,19 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/fonts");
+  eleventyConfig.addPassthroughCopy("src/notes/**/*.{jpg,jpeg,png,gif,svg,webp}");
+
+  // Rewrite relative image paths in notes so they resolve correctly
+  // e.g. ![](img/photo.webp) in /notes/my-note/ → /notes/img/photo.webp
+  eleventyConfig.addTransform("fixNoteImagePaths", function (content) {
+    if (this.page.inputPath && this.page.inputPath.includes("/notes/")) {
+      return content.replace(
+        /(<img\s[^>]*src=")(?!\/|https?:\/\/)([^"]+)(")/g,
+        '$1/notes/$2$3'
+      );
+    }
+    return content;
+  });
   // Add date formatting filter
   eleventyConfig.addFilter("formatDate", function (date) {
     return new Date(date).toLocaleDateString("fr-FR", {
