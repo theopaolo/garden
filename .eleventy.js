@@ -21,11 +21,30 @@ module.exports = function (eleventyConfig) {
   });
   // Add date formatting filter
   eleventyConfig.addFilter("formatDate", function (date) {
-    return new Date(date).toLocaleDateString("fr-FR", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    });
+    const parsedDate = new Date(date);
+    if (Number.isNaN(parsedDate.getTime())) {
+      return "";
+    }
+
+    const capitalize = (value) =>
+      value.charAt(0).toUpperCase() + value.slice(1);
+
+    const weekday = capitalize(
+      new Intl.DateTimeFormat("fr-FR", { weekday: "long" })
+        .format(parsedDate)
+        .slice(0, 3)
+    );
+
+    const month = capitalize(
+      new Intl.DateTimeFormat("fr-FR", { month: "long" })
+        .format(parsedDate)
+        .slice(0, 3)
+    );
+
+    const day = parsedDate.getDate();
+    const year = parsedDate.getFullYear();
+
+    return `${weekday} ${day} ${month} ${year}`;
   });
 
   // Add keys filter

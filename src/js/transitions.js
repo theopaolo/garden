@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const emitPageUpdated = () => {
+    document.dispatchEvent(new Event("garden:page-updated"));
+  };
+
+  emitPageUpdated();
+
   if ("navigation" in window && document.startViewTransition) {
     navigation.addEventListener("navigate", (event) => {
       const toUrl = new URL(event.destination.url);
@@ -20,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
               document.title = html.title;
 
               window.scrollTo(0, 0);
+              emitPageUpdated();
               
             } catch (error) {
               console.error("Transition failed:", error);
