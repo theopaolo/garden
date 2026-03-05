@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr">
+  <title>Jardin numérique</title>
+  <subtitle>Cultivé par Théo — développeur, designer, artiste, et parfois enseignant.</subtitle>
+  <link href="https://jardin.ludique.dev/feed.xml" rel="self" />
+  <link href="https://jardin.ludique.dev/" />
+  <updated>2026-03-05T00:00:00Z</updated>
+  <id>https://jardin.ludique.dev/</id>
+  <author>
+    <name>Théo</name>
+  </author>
+  <entry>
+    <title>Color Catchers</title>
+    <link href="https://jardin.ludique.dev/notes/color-catchers/" />
+    <updated>2026-03-05T00:00:00Z</updated>
+    <id>https://jardin.ludique.dev/notes/color-catchers/</id>
+    <content type="html">&lt;p&gt;Un mois que je bricole une app pour extraire des palettes de couleur du monde réel.
+&lt;img src=&quot;https://jardin.ludique.dev/notes/color-catchers/img/colorcatch.webp&quot; alt=&quot;rose ciel d&#39;Aix-en-Provence&quot;&gt;&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Web drifting as a creative practice.</title>
+    <link href="https://jardin.ludique.dev/notes/web-drifting-as-a%20creative-practice/" />
+    <updated>2025-04-21T00:00:00Z</updated>
+    <id>https://jardin.ludique.dev/notes/web-drifting-as-a%20creative-practice/</id>
+    <content type="html">&lt;p&gt;I love spending hours drifting through the web. Not rushing from one click to the next in search of efficiency or purpose, but wandering like a digital flâneur. A curious walker, moving with the same energy Guy Debord described in his concept of psychogeography [1].&lt;/p&gt;
+&lt;p&gt;La dérive, as theorized by the Situationist International, invites a person to explore a city by letting themselves be guided by its contours, atmospheres, and ambiances. No map. No goal. Just openness to discovery.&lt;/p&gt;
+&lt;p&gt;I apply this same approach to cities like Lyon, where I live, or any place I visit. I walk for the sake of walking. I look up at buildings, sidewalks, signs, plants pushing through cracks in the pavement, the textures of walls, the people passing by. I collect the overlooked and the unexpected little urban wonders.&lt;/p&gt;
+&lt;p&gt;I do the same when online.&lt;/p&gt;
+&lt;p&gt;I don’t stick to the highways of the web not Facebook, not Instagram, not X, not Threads. Even the quieter suburbs like Bluesky don’t hold me for long. I prefer the alleys, the tiny roads, the forgotten paths: personal blogs, quirky side-projects, one-page sites, old wikis, obscure digital gardens.&lt;/p&gt;
+&lt;p&gt;I stroll. I drift. I bookmark.&lt;/p&gt;
+&lt;p&gt;Like a street photographer, I now want to curate this practice, to show my collection and share the souvenirs I’ve gathered from my walks through the digital landscape.&lt;/p&gt;
+&lt;p&gt;For now, I’m using leaflet.pub to collect and display these finds. It’s a perfect little tool, lightweight, poetic in its own way. Maybe later I’ll build something more personal, but for now, I love its form and philosophy.&lt;/p&gt;
+&lt;p&gt;Eventually, I want to write a small guide to web drifting, a psychogeographer’s handbook for navigating the dense, urban-like networks of the internet, and learning to see what’s hiding beyond the algorithmic feed.&lt;/p&gt;
+&lt;p&gt;First leaftlet : &lt;a href=&quot;https://leaflet.pub/cf5a2593-357b-4e16-a684-f76fb31fc9a6&quot;&gt;Indie spaces and tools&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Notes&lt;/p&gt;
+&lt;p&gt;[1] https://en.m.wikipedia.org/wiki/Psychogeography&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>À la dérive web</title>
+    <link href="https://jardin.ludique.dev/notes/derive-web-comme-pratique-creative/" />
+    <updated>2025-04-21T00:00:00Z</updated>
+    <id>https://jardin.ludique.dev/notes/derive-web-comme-pratique-creative/</id>
+    <content type="html">&lt;p&gt;J’adore passer des heures à dériver sur le web. Non pas enchaîner les clics à la recherche d&#39;efficacité ou de but précis, mais errer, comme un flâneur numérique. Un marcheur curieux, animé par la même énergie que Guy Debord décrit dans son concept de &lt;em&gt;psychogéographie&lt;/em&gt; [1].&lt;/p&gt;
+&lt;p&gt;La &lt;em&gt;dérive&lt;/em&gt;, telle que théorisée par l’Internationale situationniste, invite à explorer la ville en se laissant guider par ses contours, ses ambiances, ses atmosphères. Sans carte. Sans objectif. Juste une invitation à la découverte.&lt;/p&gt;
+&lt;p&gt;J’applique cette même approche dans des villes comme Lyon, où je vis, ou partout où je voyage. Je marche pour le simple plaisir de marcher. Je lève les yeux vers les bâtiments, les trottoirs, les enseignes, les plantes qui percent les gouttières, les textures des murs, les passants. Je collectionne les détails ignoré, les petites merveilles urbaines inattendues.&lt;/p&gt;
+&lt;p&gt;En ligne, je fais pareil.&lt;/p&gt;
+&lt;p&gt;J&#39;évite les autoroutes du web, Facebook, Instagram, X/twitter, Threads. Même les banlieues plus calmes comme Bluesky ne me retiennent pas longtemps. Je préfère les ruelles, les chemins de traverse, les sentiers scabreux : blogs personnels, projets expérimentaux, sites one-pager,  wikis, jardins numériques obscurs.&lt;/p&gt;
+&lt;p&gt;Je flâne. Je dérive. Je mets en favori.&lt;/p&gt;
+&lt;p&gt;Comme un photographe de rue, j’ai aujourd’hui envie de donner forme à cette pratique : montrer ma collection, partager les souvenirs récoltés au fil de mes balades dans les paysages numériques.&lt;/p&gt;
+&lt;p&gt;Pour l’instant, j’utilise leaflet.pub pour rassembler et exposer ces trouvailles. C’est un outil parfait, léger, poétique à sa manière. Peut-être que je fabriquerai quelque chose de plus personnel un jour, mais pour l’instant, j’aime sa forme et sa philosophie.&lt;/p&gt;
+&lt;p&gt;Plus tard j&#39;imagine écrire un petit guide de l’errance web : un manuel du &lt;em&gt;psychogéographe&lt;/em&gt; pour explorer les réseaux denses et urbanisés d’Internet, et apprendre à voir ce qui se cache au-delà des flux algorithmiques.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Premier leaftlet :&lt;/strong&gt; &lt;a href=&quot;https://leaflet.pub/cf5a2593-357b-4e16-a684-f76fb31fc9a6&quot;&gt;Indie spaces and tools&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Notes&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1] https://fr.m.wikipedia.org/wiki/Psychog%C3%A9ographie&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>C&#39;est en ligne</title>
+    <link href="https://jardin.ludique.dev/notes/terre-fraiche/" />
+    <updated>2025-04-03T00:00:00Z</updated>
+    <id>https://jardin.ludique.dev/notes/terre-fraiche/</id>
+    <content type="html">&lt;p&gt;Ce jardin numérique prend doucement vie. Les fondations techniques sont en place, prêtes à accueillir les premières pousses.&lt;/p&gt;
+&lt;p&gt;La stack technique est posée :
+Un générateur de site statique (SSG) avec 11ty (eleventy), choisi pour sa simplicité et ses performances. Le contenu est rédigé en Markdown.&lt;/p&gt;
+&lt;p&gt;Pour l&#39;édition, n&#39;importe quel éditeur Markdown ferait l&#39;affaire. Personnellement, j&#39;ai opté pour Obsidian (avec applications mobile et desktop). C&#39;est un éditeur très flexible et populaire, qui interprète nativement le frontmatter utilisé par 11ty. Cela me permet d&#39;écrire et d&#39;ajouter des métadonnées facilement depuis un ordinateur ou un téléphone.&lt;/p&gt;
+&lt;p&gt;Un autre avantage est que mes notes sont également accessibles hors ligne, stockées localement sur mes appareils, et la synchronisation se fait via GitHub. Les notes ont leur propre dépôt Git, séparé du code du site. Pour les rendre accessibles à 11ty au moment du build, une GitHub Action commence par cloner ce dépôt de notes directement dans le répertoire source du projet 11ty.&lt;/p&gt;
+&lt;p&gt;De cette façon, je peux séparer le contenu (les notes) du contenant (le code du site). Dans mon cas, cette méthode s&#39;est avérée plus efficace à gérer au niveau de l&#39;intégration continue (CI/CD) que l&#39;utilisation de Git submodules, qui posait des soucis de versions de modules pas à jour avec l&#39;état du contenu.&lt;/p&gt;
+&lt;p&gt;Ainsi, à chaque push de nouvelles notes ou sur le dépôt Git du contenu, une GitHub Action se déclenche pour notifier le dépôt SSG. Ce dernier clone le contenu et construit l&#39;intégralité du site avec 11ty, puis le déploie sur une GitHub Page accessible via l&#39;adresse jardin.ludique.dev.&lt;/p&gt;
+&lt;p&gt;Le processus, une fois en place, semble presque magique !&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Encore une site</title>
+    <link href="https://jardin.ludique.dev/notes/et-encore-un-de-plus/" />
+    <updated>2025-04-03T00:00:00Z</updated>
+    <id>https://jardin.ludique.dev/notes/et-encore-un-de-plus/</id>
+    <content type="html">&lt;p&gt;Des blogs, des portfolios et autres projets de sites persos, j’en ai tenté à plusieurs reprises, sans jamais les mettre en ligne.&lt;/p&gt;
+&lt;p&gt;Mon site actuel, lui, a été fait en une après-midi, juste histoire d’avoir une carte de visite pour trouver un boulot.&lt;/p&gt;
+&lt;p&gt;J’ai pourtant déjà refait ce portfolio plusieurs fois : designé différentes versions, intégré dans des stacks diverses — SSG, PHP, SPA…&lt;/p&gt;
+&lt;p&gt;Elles dorment toutes au fond de mon SSD, dans l&#39;attente d&#39;hypotétiquement voir le jour...&lt;/p&gt;
+&lt;p&gt;Et nous voilà donc repartis pour une nouvelle tentative; Avec une nouvelle stack, cette fois on part sur &lt;strong&gt;11ty&lt;/strong&gt; et &lt;strong&gt;Obsidian&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;J’ai &amp;quot;confiance&amp;quot; — ou du moins, j’y crois — un peu comme une personne qui essaye d’arrêter la clope.&lt;/p&gt;
+&lt;p&gt;La différence, c’est que ce site part en prod tel quel :)&lt;/p&gt;
+&lt;p&gt;Tant pis pour les effets &lt;em&gt;wow&lt;/em&gt;, les transitions stylées, et la couche de vernis CSS que j’aime tant déposer.&lt;/p&gt;
+&lt;p&gt;Allez, c’est promis, c’est le dernier des derniers.&lt;/p&gt;
+&lt;p&gt;Et au plaisir de te retrouver, petit blog.&lt;/p&gt;
+</content>
+  </entry>
+</feed>
