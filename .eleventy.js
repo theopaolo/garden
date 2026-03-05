@@ -107,22 +107,21 @@ module.exports = function (eleventyConfig) {
     return [...tagSet];
   });
 
-  eleventyConfig.addPlugin(pluginRss, {
-    type: "atom", // or "rss", "json"
+  eleventyConfig.addPlugin(pluginRss.feedPlugin, {
+    type: "atom",
     outputPath: "/feed.xml",
     collection: {
-      name: "notes", // iterate over `collections.notes`
-      limit: 10, // 0 means no limit
+      name: "notes",
+      limit: 10,
     },
     metadata: {
       language: "fr",
-      title: "Jardin numérique",
+      title: "Jardin num\u00e9rique",
       subtitle:
-        "Cultivé par Théo — développeur, designer, artiste, et parfois enseignant.",
+        "Cultiv\u00e9 par Th\u00e9o \u2014 d\u00e9veloppeur, designer, artiste, et parfois enseignant.",
       base: "https://jardin.ludique.dev",
       author: {
-        name: "Théo",
-        email: "", // Optional
+        name: "Th\u00e9o",
       },
     },
   });
