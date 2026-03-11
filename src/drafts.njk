@@ -1,0 +1,37 @@
+---
+layout: base.njk
+title: Brouillons
+permalink: /drafts/
+robots: noindex, nofollow, noarchive
+eleventyExcludeFromCollections: true
+---
+
+<main class="container">
+  <header class="note-header">
+    <h1>Brouillons</h1>
+    <p class="note-chapo">Zone de prévisualisation temporaire. Cette page n'est ni liée publiquement, ni destinée à l'indexation.</p>
+  </header>
+
+  <ul class="notes-list">
+    {% for note in collections.draftNotes | reverse %}
+      <li>
+        <a href="{{ note.url }}" class="note-item">
+          <span class="note-title">{{ note.data.title or "Sans titre" }}</span>
+          {% if note.data.tags %}
+            {% for tag in note.data.tags %}
+              <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          {% endif %}
+          <span class="note-status-badge">Brouillon</span>
+          <span class="note-date">{{ note.date | formatDate }}</span>
+        </a>
+      </li>
+    {% else %}
+      <li><p>Aucun brouillon pour l'instant.</p></li>
+    {% endfor %}
+  </ul>
+
+  <footer class="footer">
+    <a href="/" class="back-link footer-button">← Retour</a>
+  </footer>
+</main>

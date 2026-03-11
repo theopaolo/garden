@@ -15,6 +15,9 @@ layout: base.njk
         </div>
       {% endif %}
     </div>
+    {% if draft %}
+      <p class="note-status-message">Brouillon visible uniquement via cette URL de prévisualisation. Cette page est marquée <code>noindex</code>.</p>
+    {% endif %}
     {% if description %}
       <p class="note-chapo">{{ description }}</p>
     {% endif %}

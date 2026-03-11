@@ -15,7 +15,7 @@ eleventyComputed:
   </header>
 
   <ul class="notes-list">
-    {% set taglist = collections[tag] %}
+    {% set taglist = collections[tag] | excludeDrafts %}
     {% for note in taglist | reverse %}
       <li>
         <a href="{{ note.url }}" class="note-item">

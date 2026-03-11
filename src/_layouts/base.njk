@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% set robotsContent = robots or (draft and "noindex, nofollow, noarchive") %}
     <meta name="description" content="Un jardin numérique cultivé par Théo.">
+    {% if robotsContent %}
+    <meta name="robots" content="{{ robotsContent }}">
+    {% endif %}
     <meta name="theme-color" content="#5C4B75">
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/css/style.css">

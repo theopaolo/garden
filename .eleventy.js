@@ -1,5 +1,36 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
+const NOTE_GLOBS = [
+  "src/notes/**/*.md",
+  "!src/notes/.trash/**",
+  "!src/notes/.obsidian/**",
+];
+
+function isSystemNotePath(path) {
+  return (
+    path.includes("/.trash/") ||
+    path.includes("/.obsidian/") ||
+    path.includes("/.git/")
+  );
+}
+
+function isRenderableNote(item) {
+  const path = item.inputPath;
+
+  if (
+    isSystemNotePath(path) ||
+    path.includes("/src/notes.njk") ||
+    path.includes("/src/tags.njk") ||
+    path.includes("/src/index.njk") ||
+    path.includes("/src/labo.njk") ||
+    item.data.layout === "base.njk"
+  ) {
+    return false;
+  }
+
+  return item.data.title && (item.data.date || item.date);
+}
+
 module.exports = function (eleventyConfig) {
   // Copy static assets to the output
   eleventyConfig.addPassthroughCopy("src/css");
@@ -60,31 +91,14 @@ module.exports = function (eleventyConfig) {
   // Add collections for notes
   eleventyConfig.addCollection("notes", function (collectionApi) {
     return collectionApi
-      .getFilteredByGlob([
-        "src/notes/**/*.md",
-        "!src/notes/.trash/**",
-        "!src/notes/.obsidian/**",
-      ])
-      .filter((item) => {
-        const path = item.inputPath;
+      .getFilteredByGlob(NOTE_GLOBS)
+      .filter((item) => isRenderableNote(item) && !item.data.draft);
+  });
 
-        // Skip system/hidden folders and navigation pages
-        if (
-          path.includes("/.trash/") ||
-          path.includes("/.obsidian/") ||
-          path.includes("/.git/") ||
-          path.includes("/src/notes.njk") ||
-          path.includes("/src/tags.njk") ||
-          path.includes("/src/index.njk") ||
-          path.includes("/src/labo.njk") ||
-          item.data.layout === "base.njk"
-        ) {
-          return false;
-        }
-
-        // Only keep valid notes
-        return item.data.title && (item.data.date || item.date);
-      });
+  eleventyConfig.addCollection("draftNotes", function (collectionApi) {
+    return collectionApi
+      .getFilteredByGlob(NOTE_GLOBS)
+      .filter((item) => isRenderableNote(item) && item.data.draft);
   });
 
   eleventyConfig.addCollection("rootNotes", function (collectionApi) {
@@ -92,7 +106,8 @@ module.exports = function (eleventyConfig) {
       .getFilteredByGlob("src/notes/*.md")
       .filter(
         (item) =>
-          !item.inputPath.includes("/.trash/") &&
+          !isSystemNotePath(item.inputPath) &&
+          !item.data.draft &&
           !item.url.endsWith("/") &&
           item.url.startsWith("/notes/")
       );
@@ -101,7 +116,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("laboNotes", function (collectionApi) {
     return collectionApi
       .getFilteredByGlob("src/notes/labo/**/*.md")
-      .filter((item) => !item.inputPath.includes("/.trash/"));
+      .filter((item) => !isSystemNotePath(item.inputPath) && !item.data.draft);
   });
 
   eleventyConfig.addFilter("excludeItemByUrl", (collection, urlToExclude) => {
@@ -111,11 +126,15 @@ module.exports = function (eleventyConfig) {
     return collection.filter((item) => item.url !== urlToExclude);
   });
 
+  eleventyConfig.addFilter("excludeDrafts", (collection = []) =>
+    collection.filter((item) => !item.data.draft)
+  );
+
   // Add tag collection
   eleventyConfig.addCollection("tagList", function (collection) {
     const tagSet = new Set();
     collection.getAll().forEach((item) => {
-      if ("tags" in item.data) {
+      if ("tags" in item.data && !item.data.draft) {
         let tags = item.data.tags;
         if (typeof tags === "string") {
           tags = [tags];
