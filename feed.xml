@@ -4,20 +4,11 @@
   <subtitle>Cultivé par Théo — développeur, designer, artiste, et parfois enseignant.</subtitle>
   <link href="https://jardin.ludique.dev/feed.xml" rel="self" />
   <link href="https://jardin.ludique.dev/" />
-  <updated>2026-03-05T00:00:00Z</updated>
+  <updated>2026-01-17T00:00:00Z</updated>
   <id>https://jardin.ludique.dev/</id>
   <author>
     <name>Théo</name>
   </author>
-  <entry>
-    <title>Color Catchers</title>
-    <link href="https://jardin.ludique.dev/notes/color-catchers/" />
-    <updated>2026-03-05T00:00:00Z</updated>
-    <id>https://jardin.ludique.dev/notes/color-catchers/</id>
-    <content type="html">&lt;p&gt;Un mois que je bricole une app pour extraire des palettes de couleur du monde réel.
-&lt;img src=&quot;https://jardin.ludique.dev/notes/color-catchers/img/colorcatch.webp&quot; alt=&quot;rose ciel d&#39;Aix-en-Provence&quot;&gt;&lt;/p&gt;
-</content>
-  </entry>
   <entry>
     <title>Une graine</title>
     <link href="https://jardin.ludique.dev/notes/graine-01/" />
