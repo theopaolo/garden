@@ -4,11 +4,41 @@
   <subtitle>Cultivé par Théo — développeur, designer, artiste, et parfois enseignant.</subtitle>
   <link href="https://jardin.ludique.dev/feed.xml" rel="self" />
   <link href="https://jardin.ludique.dev/" />
-  <updated>2026-01-17T00:00:00Z</updated>
+  <updated>2026-03-05T00:00:00Z</updated>
   <id>https://jardin.ludique.dev/</id>
   <author>
     <name>Théo</name>
   </author>
+  <entry>
+    <title>Color Catchers</title>
+    <link href="https://jardin.ludique.dev/notes/color-catchers/" />
+    <updated>2026-03-05T00:00:00Z</updated>
+    <id>https://jardin.ludique.dev/notes/color-catchers/</id>
+    <content type="html">&lt;p&gt;Environ un mois que je bricole une app jouet pour extraire des palettes de couleur du monde réel.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://jardin.ludique.dev/notes/color-catchers/img/colorcatch.webp&quot; alt=&quot;rose ciel d&#39;Aix-en-Provence&quot;&gt;&lt;/p&gt;
+&lt;p&gt;L&#39;idée m&#39;est venue lors d&#39;un cours d&#39;initiation au développement web, animé pour l&#39;école LDLC et la proposition aux étudiants de concevoir un &lt;strong&gt;micro-tool&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2&gt;Micro-tool : courte définition personnelle&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Un &lt;strong&gt;petit&lt;/strong&gt; logiciel ou bout de code fabriqué en réponse à une envie ou un besoin &lt;strong&gt;précis&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Dans leur simplicité, les micro-outils sont d&#39;une grande efficacité à l&#39;inverse de logiciels multi-fonctions, complexes, lourds et qui demandent des abonnements ou des licences onéreuses.&lt;/p&gt;
+&lt;h2&gt;Sélection de micro-tools&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://delphi.tools/&quot;&gt;https://delphi.tools/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://framadate.org/abc/en/&quot;&gt;https://framadate.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://antinote.io/&quot;&gt;https://antinote.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mklaabs.com/&quot;&gt;https://mklaabs.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://whtifs.com/&quot;&gt;https://whtifs.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://spacetypegenerator.com/&quot;&gt;https://spacetypegenerator.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://upscayl.org/&quot;&gt;https://upscayl.org/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Et l&#39;IA dans tout ça ?&lt;/h2&gt;
+&lt;p&gt;Le &lt;em&gt;vibe-coding&lt;/em&gt;, pour le meilleur ou pour le pire, démocratise ce type de développement. Il donne des moyens de création à un public plus large de non-développeurs, à l&#39;instar de la vague &amp;quot;no-code&amp;quot; et, si l&#39;on remonte davantage dans le temps, on pourrait ajouter Flash et le mythique logiciel HyperCard, créé par &lt;a href=&quot;https://en.wikipedia.org/wiki/Bill_Atkinson&quot;&gt;Bill Atkinson&lt;/a&gt; pour Apple.&lt;/p&gt;
+&lt;p&gt;Dans cette direction, on voit émerger des produits spécialisés en &lt;em&gt;vibe-coding&lt;/em&gt;, comme &lt;a href=&quot;https://www.glazeapp.com/&quot;&gt;Glaze&lt;/a&gt; ou &lt;a href=&quot;https://playground.nothing.tech/apps&quot;&gt;Essential App&lt;/a&gt; de l&#39;entreprise hardware Nothing, et pour les plus connus : &lt;a href=&quot;https://lovable.dev/&quot;&gt;Lovable&lt;/a&gt;, &lt;a href=&quot;https://v0.app/&quot;&gt;V0&lt;/a&gt;, &lt;a href=&quot;https://base44.com/&quot;&gt;Base44&lt;/a&gt;, &lt;a href=&quot;https://floot.com/&quot;&gt;Floot&lt;/a&gt; etc…&lt;/p&gt;
+&lt;h2&gt;Et nous ?&lt;/h2&gt;
+&lt;p&gt;Pour &lt;a href=&quot;http://colorcatchers.co&quot;&gt;colorcatchers.co&lt;/a&gt;, on utilise Claude Code pour nous assister dans le développement ; nous avons un petit workflow avec des &lt;em&gt;skills&lt;/em&gt; et des MCP. Sans IA pour nous assister dans le dev, nous n&#39;aurions peut-être pas osé investir autant d&#39;énergie dans une idée aussi &amp;quot;bête&amp;quot; ;).&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Une graine</title>
     <link href="https://jardin.ludique.dev/notes/graine-01/" />
