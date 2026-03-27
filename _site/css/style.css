@@ -1,5 +1,7 @@
 @import url('./reset.css');
 @import url('./fonts.css');
+@import url('./utilities.css');
+@import url('./button.css');
 
 :root {
     --text-color: #5C4B75;
@@ -144,7 +146,6 @@ a:hover {
 
 .notes-list {
     padding: 0;
-    margin: 0;
     flex: 1;
 }
 
@@ -168,10 +169,10 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 0.6rem;
+    gap: 0.5rem;
     padding: 0.95rem 1rem 0.85rem;
     border: 1px solid var(--card-border);
-    border-radius: 14px;
+    border-radius: .75rem;
     background: var(--card-bg);
     position: relative;
     isolation: isolate;
@@ -184,7 +185,7 @@ a:hover {
     content: "";
     position: absolute;
     inset: 1px;
-    border-radius: 12px;
+    border-radius: 0.75;
     background: radial-gradient(130% 95% at var(--card-accent-x) -10%, var(--card-tint) 0%, transparent 62%);
     pointer-events: none;
     z-index: 0;
@@ -206,6 +207,34 @@ a:hover {
 .note-item > * {
     position: relative;
     z-index: 1;
+}
+
+/* Grid layout */
+
+.notes-list[data-view='grid'] {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.notes-list[data-view='grid']  li + li {
+    margin-top: unset;
+}
+
+.notes-list[data-view='grid'] .note-item {
+    height: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: start;
+}
+
+.notes-list[data-view='grid'] .note-title {
+    flex: 1;
+    width: 100%;
+}
+
+.notes-list[data-view='grid'] .note-date {
+    margin-left: unset;
 }
 
 .note-item.card-variant-iris { --card-tint: rgba(168, 150, 255, 0.16); }
@@ -537,7 +566,6 @@ a.tag:hover {
 /* Footer */
 
 .footer {
-    border-top: 1px solid var(--border-color);
     margin-top: auto;
     padding: 1.5rem 0 0;
     display: flex;

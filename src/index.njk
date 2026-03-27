@@ -5,12 +5,14 @@ title: Jardin de Théo
 
 <main class="container">
   <header class="intro">
-    <h1>Jardin de Théo</h1>
-    <p>Ce jardin numérique est lentement cultivé par Théo [développeur, designer, artiste, et parfois enseignant].</p>
-    <p>Idées, réflexions et expérimentations. Bienvenue si tu tombes ici.</p>
+    <h1>Jardinière de Théo -  [développeur, designer, artiste, enseignant]</h1>
+    <p>Ce site est ma jardinière numérique, lentement entretenue.</p>
+    <p>Des idées, réflexions, expérimentations et autres. Bienvenue ☺</p>
   </header>
 
-  <ul class="notes-list">
+  {# <button data-view="list" class="mb-4">list</button> #}
+
+  <ul class="notes-list" data-view="grid">
     {% set allNotes = collections.notes | reverse %}
     {% for note in allNotes %}
       {% if note.data.layout != "base.njk" %}
@@ -32,9 +34,9 @@ title: Jardin de Théo
   </ul>
 
   <footer class="footer">
-    <p>Me contacter sur :</p>
     <p><a href="https://bsky.app/profile/theogs.bsky.social">bsky</a> · <a href="https://www.are.na/theo-paolo/channels">are.na</a></p>
     <a href="/feed.xml" class="footer-button rss-button" aria-label="Flux RSS">RSS</a>
     <p>{{ site.buildTime | formatDate }}</p>
   </footer>
 </main>
+<script type="module" src="/js/note-view.js"></script>

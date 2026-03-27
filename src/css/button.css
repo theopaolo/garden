@@ -1,0 +1,7 @@
+button {
+  background-color: var(--accent-color);
+  color: var(--accent-bg);
+  border: unset;
+  border-radius: .25rem;
+  width: fit-content;
+}
