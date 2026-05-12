@@ -4,63 +4,11 @@
   <subtitle>Cultivé par Théo — développeur, designer, artiste, et parfois enseignant.</subtitle>
   <link href="https://jardin.ludique.dev/feed.xml" rel="self" />
   <link href="https://jardin.ludique.dev/" />
-  <updated>2026-05-12T07:54:03Z</updated>
+  <updated>2026-03-05T00:00:00Z</updated>
   <id>https://jardin.ludique.dev/</id>
   <author>
     <name>Théo</name>
   </author>
-  <entry>
-    <title>Note title</title>
-    <link href="https://jardin.ludique.dev/notes/templates/Graine/" />
-    <updated>2026-05-12T07:54:03Z</updated>
-    <id>https://jardin.ludique.dev/notes/templates/Graine/</id>
-    <content type="html"></content>
-  </entry>
-  <entry>
-    <title>Vers des outils plus libre</title>
-    <link href="https://jardin.ludique.dev/notes/Vers%20des%20outils%20plus%20libre/" />
-    <updated>2026-05-12T00:00:00Z</updated>
-    <id>https://jardin.ludique.dev/notes/Vers%20des%20outils%20plus%20libre/</id>
-    <content type="html">&lt;p&gt;Cette année, j&#39;ai eu envie de déménager vers des alternatives plus ouvertes et souveraines pour le travail et quotidient. Étant sensible à l&#39;UX, j&#39;ai essayé de trouver des solutions aussi exigeantes dans ce domaine, ce qui n&#39;est pas toujours le cas dans le logiciel libre.
-&lt;em&gt;Clémence Piteau, bénévole à Designer Ethique, et Léopoldine Mennessier, membre de la Cooperative des Internets, en parlent dans cette&lt;/em&gt; &lt;a href=&quot;https://mixitconf.org/2026/ux-logiciels-libres-et-democratie-pour-un-numerique-populaire&quot;&gt;&lt;em&gt;conférence&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Vers où je déménage&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Mails + Calendar → &lt;a href=&quot;https://www.infomaniak.com/en/ksuite&quot;&gt;Ksuite&lt;/a&gt;, &lt;a href=&quot;https://tuta.com/&quot;&gt;Tuta&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Calendar app → &lt;a href=&quot;https://f-droid.org/en/packages/ws.xsoh.etar/&quot;&gt;Etar&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Notion notes → &lt;a href=&quot;https://promissansfautes.fr/&quot;&gt;PSF&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Notion wiki → &lt;a href=&quot;https://docmost.com/&quot;&gt;Docmost&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Notion project management → &lt;a href=&quot;https://plane.so/&quot;&gt;Plane&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Github → &lt;a href=&quot;https://about.gitea.com/&quot;&gt;Gitea&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;VSCode → &lt;a href=&quot;https://zed.dev/&quot;&gt;Zed&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Figma → &lt;a href=&quot;https://pentpot.app/&quot;&gt;Pentpot&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Figma for UX → &lt;a href=&quot;https://draw.io/&quot;&gt;Drawio&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Meta → &lt;a href=&quot;https://bsky.app/&quot;&gt;Bluesky&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Pinterest → &lt;a href=&quot;https://www.are.na/&quot;&gt;Are.na&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;NPM →  &lt;a href=&quot;https://npmx.dev/&quot;&gt;NPMX&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;... et d&#39;autres à venir&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Notion est un outil formidable que j’utilise depuis mes études, quand ce n’était encore qu’un simple éditeur de fichiers Markdown, puis Notion 2.0. J’ai continué à l’utiliser au fil du temps et des ses versions. Mais pas sans inconvénients :&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Pannes de l’outil à des moments importants,&lt;/li&gt;
-&lt;li&gt;pas de mode hors ligne fiable,&lt;/li&gt;
-&lt;li&gt;toutes les données sont hébergées chez AWS.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;L’outil reste très bon et a inspiré plusieurs clones. Mais aujourd’hui, je favorise des outils fait pour un usage spécifique plutôt que des options multi-usage ou no-code.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Avantages au déménagement :&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Plus de flexibilité pour étendre ses outils,&lt;/li&gt;
-&lt;li&gt;des APIs plus ouvertes facilitant la synchronisation entre outils,&lt;/li&gt;
-&lt;li&gt;mes données hébergées sur un petit VPS en Europe.&lt;/li&gt;
-&lt;li&gt;Le sentiment d&#39;indépendance et de liberté.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;En cours de réflexion :&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Migrer vers des LLM open source&lt;/li&gt;
-&lt;li&gt;Changer vers un FAI associatif&lt;/li&gt;
-&lt;li&gt;Mise en place d’un petit serveur maison&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-  </entry>
   <entry>
     <title>Color Catchers</title>
     <link href="https://jardin.ludique.dev/notes/color-catchers/" />
