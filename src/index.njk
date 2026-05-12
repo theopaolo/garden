@@ -20,9 +20,11 @@ title: Jardin de Théo
         <a href="{{ note.url }}" class="note-item">
           <span class="note-title">{{ note.data.title or "Sans titre" }}</span>
           {% if note.data.tags %}
+          <div class="note-tags">
             {% for tag in note.data.tags %}
               <span class="tag">{{ tag }}</span>
             {% endfor %}
+          </div>
           {% endif %}
           <span class="note-date">{{ note.date | formatDate }}</span>
         </a>
