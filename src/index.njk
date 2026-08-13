@@ -5,8 +5,8 @@ title: Jardin de Théo
 
 <main class="container">
   <header class="intro">
-    <h1>Jardinière de Théo -  [développeur, designer, artiste, enseignant]</h1>
-    <p>Ce site est ma jardinière numérique, lentement entretenue.</p>
+    <h1><a href="https://maggieappleton.com/garden-history" target="_blank">Jardin</a> de Théo Paolo G. à la fois développeur, designer, artiste, enseignant.</h1>
+    <p>Ce site est ma jardin numérique, lentement entretenue.</p>
     <p>Des idées, réflexions, expérimentations et autres. Bienvenue ☺</p>
   </header>
 
@@ -37,7 +37,10 @@ title: Jardin de Théo
 
   <footer class="footer">
     <p><a href="https://bsky.app/profile/theogs.bsky.social">bsky</a> · <a href="https://www.are.na/theo-paolo/channels">are.na</a></p>
-    <a href="/feed.xml" class="footer-button rss-button" aria-label="Flux RSS">RSS</a>
+    <div class="footer-actions">
+      <a href="/feed.xml" class="footer-button rss-button" aria-label="Flux RSS">RSS</a>
+      {% include "theme-toggle.njk" %}
+    </div>
     <p>{{ site.buildTime | formatDate }}</p>
   </footer>
 </main>

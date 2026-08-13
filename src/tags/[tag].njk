@@ -30,6 +30,9 @@ eleventyComputed:
 
   <footer class="footer">
     <a href="/" class="back-link footer-button">Retour</a>
-    <a href="/feed.xml" class="footer-button rss-button" aria-label="Flux RSS">RSS</a>
+    <div class="footer-actions">
+      <a href="/feed.xml" class="footer-button rss-button" aria-label="Flux RSS">RSS</a>
+      {% include "theme-toggle.njk" %}
+    </div>
   </footer>
 </main>

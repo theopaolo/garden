@@ -10,6 +10,12 @@
     {% endif %}
     <meta name="theme-color" content="#5C4B75">
     <title>{{ title }}</title>
+    <script>
+        try {
+            var theme = localStorage.getItem("theme");
+            if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme;
+        } catch (e) {}
+    </script>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
     <link rel="alternate" type="application/atom+xml" href="/feed.xml" title="Jardin numérique">
@@ -27,9 +33,11 @@
             </filter>
         </defs>
     </svg>
+
     {{ content | safe }}
 
     <script type="module" src="/js/note-whimsy.js"></script>
     <script type="module" src="/js/transitions.js"></script>
+    <script type="module" src="/js/theme-toggle.js"></script>
 </body>
 </html>

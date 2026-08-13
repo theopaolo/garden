@@ -23,7 +23,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --text-color: #e6e0f0;
     --text-color-light: #bbaac6;
     --background-color: #181420;
@@ -36,6 +36,20 @@
     --card-focus-ring: rgba(255, 168, 212, 0.2);
     --card-hover-shadow: rgba(104, 82, 128, 0.53);
   }
+}
+
+:root[data-theme="dark"] {
+  --text-color: #e6e0f0;
+  --text-color-light: #bbaac6;
+  --background-color: #181420;
+  --border-color: #52445c;
+  --accent-color: #ffa8d4;
+  --accent-bg: #3a2f44;
+  --card-bg: #1d1727;
+  --card-bg-hover: #241d30;
+  --card-border: #5e4f6b;
+  --card-focus-ring: rgba(255, 168, 212, 0.2);
+  --card-hover-shadow: rgba(104, 82, 128, 0.53);
 }
 
 body {
@@ -657,6 +671,44 @@ a.tag:hover {
   font-size: 0.75rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+.footer-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.theme-toggle {
+  cursor: pointer;
+  padding: 0.25rem 0.45rem;
+}
+
+.theme-toggle svg {
+  width: 0.95rem;
+  height: 0.95rem;
+}
+
+.theme-toggle .icon-sun {
+  display: none;
+}
+
+:root[data-theme="dark"] .theme-toggle .icon-sun {
+  display: block;
+}
+
+:root[data-theme="dark"] .theme-toggle .icon-moon {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .icon-sun {
+    display: block;
+  }
+
+  :root:not([data-theme="light"]) .theme-toggle .icon-moon {
+    display: none;
+  }
 }
 
 /* View transitions */
