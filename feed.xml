@@ -4,11 +4,71 @@
   <subtitle>Cultivé par Théo — développeur, designer, artiste, et parfois enseignant.</subtitle>
   <link href="https://jardin.ludique.dev/feed.xml" rel="self" />
   <link href="https://jardin.ludique.dev/" />
-  <updated>2026-05-12T00:00:00Z</updated>
+  <updated>2026-10-11T00:00:00Z</updated>
   <id>https://jardin.ludique.dev/</id>
   <author>
     <name>Théo</name>
   </author>
+  <entry>
+    <title>Logiciel convivial</title>
+    <link href="https://jardin.ludique.dev/notes/logiciel-convivial/" />
+    <updated>2026-10-11T00:00:00Z</updated>
+    <id>https://jardin.ludique.dev/notes/logiciel-convivial/</id>
+    <content type="html">&lt;p&gt;Les outils façonnent notre manière de penser, de travailler, d&#39;entrer en relation et de créer, qu&#39;ils soient physique (une hache, un tournevis, un marteau) ou numérique (éditeur de texte, éditeur d&#39;image, moteur de recherche web).&lt;/p&gt;
+&lt;p&gt;Cependant, beaucoup d&#39;outils que nous utilisons aujourd&#39;hui prennent la forme de plateformes de co-dépendances, abonnement, monopole, imposer des façons de faire voir de penser ( office copilote ).&lt;/p&gt;
+&lt;p&gt;Nous finissons par nous adapter plus à ces outils qu&#39;ils ne s&#39;adaptent à nous ( via de la customization et configuration )&lt;/p&gt;
+&lt;p&gt;Quelque part entre les mises à jour incessantes, les interfaces opaques, les incitations algorithmiques (&lt;em&gt;nudges&lt;/em&gt;) et le tout centralisé, nous avons perdu notre &lt;strong&gt;capacité d&#39;agir, l&#39;autonomie, le jeu, la texture, la lenteur, la personnalité, le calme.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Heureusement il existe d&#39;autres approches plus aligné avec la proposition d&#39;&lt;strong&gt;outils conviviaux&lt;/strong&gt; décrite par Ivan Illich en 1973 :&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;des outils qui &lt;em&gt;étendent la capacité humaine sans diminuer la liberté humaine.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;...dans la philosophie du logiciel, écouter &lt;a href=&quot;https://www.stallman.org/&quot;&gt;Richard Stallman&lt;/a&gt; , dans des infrastructures fédérative (Mastodon, Bluesky), le mouvement du small web, dans les manifestes de &lt;strong&gt;&lt;a href=&quot;https://leaflet.pub/about&quot;&gt;Leaflet&lt;/a&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;a href=&quot;https://resonantcomputing.org/&quot;&gt;Resonant Computing&lt;/a&gt;&lt;/strong&gt;, ainsi que les écrits de &lt;a href=&quot;https://en.wikipedia.org/wiki/Carl_Mitcham&quot;&gt;&lt;strong&gt;Carl Mitcham&lt;/strong&gt;&lt;/a&gt; pour ne citer que quelques pistes.&lt;/p&gt;
+&lt;h2&gt;Ce serait quoi un logiciel convivial ?&lt;/h2&gt;
+&lt;p&gt;En 1973, &lt;strong&gt;Ivan Illich&lt;/strong&gt; définissait la &lt;em&gt;convivialité&lt;/em&gt; comme :&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Le commerce autonome et créatif entre les personnes, et le commerce des personnes avec leur environnement.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Un outil devient convivial quand il :&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;appartient à l&#39;utilisateur&lt;/strong&gt;, pas au vendeur, entreprises&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;renforce l&#39;autonomie&lt;/strong&gt;, plutôt que de forcer à un mode d&#39;utilisation&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;est compréhensible&lt;/strong&gt;, facile à modifier, configurer et pas que le code-source&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;invite à la créativité et au bricolage&lt;/strong&gt;, bidouiller, étendre&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;soutient la communauté&lt;/strong&gt;, plutôt que de créer de la co-dépendance&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;En 2009, &lt;strong&gt;Carl Mitcham&lt;/strong&gt; soutenait que les logiciels libres (FOSS) répodaient presque à tout ces principes sauf pour trois points :&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;la stabilité&lt;/strong&gt; ( trop de mise à jours )&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;la transparence&lt;/strong&gt; (comprendre ce que fait l&#39;outil en dehors du code-source pour les non tech)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;la simplifiabilité&lt;/strong&gt; (pouvoir modifier les interfaces ou enlever des outils)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;En 2024, &lt;strong&gt;Quinton &amp;amp; Stefani&lt;/strong&gt; ont élargi la critique en nommant quatre menaces numériques :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;la dégradation écologique&lt;/li&gt;
+&lt;li&gt;le monopole radical&lt;/li&gt;
+&lt;li&gt;la polarisation algorithmique&lt;/li&gt;
+&lt;li&gt;la complexité &amp;amp; l&#39;obsolescence
+Ils proposent de concevoir les systèmes numériques comme des &lt;strong&gt;communs&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus récemment, s&#39;ajoutent de nouvelles proposition qui prennent aussi en compte le plaisir et la personnalité. La &lt;em&gt;Déclaration des Documents Délicieux&lt;/em&gt; (&lt;a href=&quot;https://leaflet.pub/da4caedc-907b-4540-871c-91229c4bc64c&quot;&gt;Declaration of Delightful Documents&lt;/a&gt;) de Leaflet appelle à des logiciels qui soient : &lt;strong&gt;Légers, Expressifs, Artefacts, Amusants, Lisibles, Émergents, Bricolables.&lt;/strong&gt; Ou le manifest du &lt;a href=&quot;https://small-tech.org/about/#small-technology&quot;&gt;Small Tech&lt;/a&gt; qui propose d&#39;aussi penser la convivialité au niveau de l&#39;infrastructure elle-même.&lt;/p&gt;
+&lt;h2&gt;Pourquoi la majorité des outils ne sont pas conviviaux&lt;/h2&gt;
+&lt;p&gt;La plupart des outils grand public, y compris Notion, Google Docs, Adobe, Microsoft Office, sont :
+&lt;strong&gt;Centralisés&lt;/strong&gt; : vos données vivent selon leurs conditions.
+&lt;strong&gt;Opaques&lt;/strong&gt; : aucune visibilité sur la logique ou les flux de données.
+&lt;strong&gt;Mis à jour par la force&lt;/strong&gt; : changements incessants d&#39;interface utilisateur.
+&lt;strong&gt;Endettés&lt;/strong&gt; : piles techniques lourdes, dépendances cachées.
+&lt;strong&gt;Homogénéisants&lt;/strong&gt; : l&#39;espace de travail de tout le monde se ressemble.
+&lt;strong&gt;Extractifs&lt;/strong&gt; : le profit d&#39;abord, l&#39;émancipation de l&#39;utilisateur ensuite.
+&lt;strong&gt;Non-bricolables&lt;/strong&gt; : la personnalisation est superficielle ou payante.&lt;/p&gt;
+&lt;p&gt;En supprimant de la friction à coup de user friendlyness on y perd notre capacité à modifier en profondeur ces outils. Bien qu&#39;utile, puissant, séduisante… ce type de produit sont non-conviviale et finissent par aliéner leurs utilisateurs.&lt;/p&gt;
+&lt;h2&gt;Plus d&#39;outils conviviaux dans le future&lt;/h2&gt;
+&lt;p&gt;En reprenant les écrit d&#39;Illich, Sophie Quinto et d&#39;autres cité dans l&#39;article, on s&#39;apercois qu&#39;un logiciel convivial n&#39;est pas un style de conception mais plutôt un projet politique qui défend une approche plus écologique, inclusive, autonome, qui prennent soins des utilisateur et leur redonne le pouvoir : de bricoler, d&#39;être créatif, de posséder l&#39;outil.&lt;/p&gt;
+&lt;h2&gt;La Grille d&#39;audit duLogiciel Convivial&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Bientôt un lien vers la grille interactive&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+  </entry>
   <entry>
     <title>Vers des outils plus libre</title>
     <link href="https://jardin.ludique.dev/notes/vers-des-outils-plus-libre/" />
@@ -18,28 +78,27 @@
 &lt;em&gt;Clémence Piteau, bénévole à Designer Ethique, et Léopoldine Mennessier, membre de la Cooperative des Internets, en parlent dans cette&lt;/em&gt; &lt;a href=&quot;https://mixitconf.org/2026/ux-logiciels-libres-et-democratie-pour-un-numerique-populaire&quot;&gt;&lt;em&gt;conférence&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Vers où je déménage&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Mails + Calendar → &lt;a href=&quot;https://www.infomaniak.com/en/ksuite&quot;&gt;Ksuite&lt;/a&gt;, &lt;a href=&quot;https://tuta.com/&quot;&gt;Tuta&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Calendar app → &lt;a href=&quot;https://f-droid.org/en/packages/ws.xsoh.etar/&quot;&gt;Etar&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Notion notes → &lt;a href=&quot;https://promissansfautes.fr/&quot;&gt;PSF&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Notion wiki → &lt;a href=&quot;https://docmost.com/&quot;&gt;Docmost&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Notion project management → &lt;a href=&quot;https://plane.so/&quot;&gt;Plane&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Github → &lt;a href=&quot;https://about.gitea.com/&quot;&gt;Gitea&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;VSCode → &lt;a href=&quot;https://zed.dev/&quot;&gt;Zed&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Figma → &lt;a href=&quot;https://pentpot.app/&quot;&gt;Pentpot&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Figma for UX → &lt;a href=&quot;https://draw.io/&quot;&gt;Drawio&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Meta → &lt;a href=&quot;https://bsky.app/&quot;&gt;Bluesky&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Pinterest → &lt;a href=&quot;https://www.are.na/&quot;&gt;Are.na&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;NPM → &lt;a href=&quot;https://npmx.dev/&quot;&gt;NPMX&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;... et d&#39;autres à venir&lt;/li&gt;
+&lt;li&gt;Mails + Calendar : &lt;a href=&quot;https://www.infomaniak.com/en/ksuite&quot;&gt;Ksuite&lt;/a&gt;, &lt;a href=&quot;https://tuta.com/&quot;&gt;Tuta&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Calendar app : &lt;a href=&quot;https://f-droid.org/en/packages/ws.xsoh.etar/&quot;&gt;Etar&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Calendar app 2 : &lt;a href=&quot;https://kashcal.onekash.org/&quot;&gt;KashCal&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Notion wiki : &lt;a href=&quot;https://docmost.com/&quot;&gt;Docmost&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Notion project management : &lt;a href=&quot;https://plane.so/&quot;&gt;Plane&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Github : &lt;a href=&quot;https://about.gitea.com/&quot;&gt;Gitea&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;VSCode : &lt;a href=&quot;https://zed.dev/&quot;&gt;Zed&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Figma : &lt;a href=&quot;https://pentpot.app/&quot;&gt;Pentpot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Figma for UX : &lt;a href=&quot;https://draw.io/&quot;&gt;Drawio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Meta : &lt;a href=&quot;https://bsky.app/&quot;&gt;Bluesky&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Pinterest : &lt;a href=&quot;https://www.are.na/&quot;&gt;Are.na&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;NPM : &lt;a href=&quot;https://npmx.dev/&quot;&gt;NPMX&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Editeur Markdown diy: &lt;a href=&quot;https://promissansfautes.fr/&quot;&gt;PSF&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Notion est un outil formidable que j’utilise depuis mes études, quand ce n’était encore qu’un simple éditeur de fichiers Markdown, puis Notion 2.0. J’ai continué à l’utiliser au fil du temps et des ses versions. Mais pas sans inconvénients :&lt;/p&gt;
+&lt;p&gt;Notion est un outil formidable que j’utilise depuis la version 1.0, quand ce n’était encore qu’un simple éditeur Markdown. J’ai continué à l’utiliser au fil du temps et des ses versions, mais pas sans inconvénients :&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Pannes de l’outil à des moments importants,&lt;/li&gt;
-&lt;li&gt;pas de mode hors ligne fiable,&lt;/li&gt;
+&lt;li&gt;Pannes de l’outil&lt;/li&gt;
+&lt;li&gt;Pas hors-ligne fiable&lt;/li&gt;
 &lt;li&gt;toutes les données sont hébergées chez AWS.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;L’outil reste très bon et a inspiré plusieurs clones. Mais aujourd’hui, je favorise des outils fait pour un usage spécifique plutôt que des options multi-usage ou no-code.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Avantages au déménagement :&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Avantages au changement :&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Plus de flexibilité pour étendre ses outils,&lt;/li&gt;
 &lt;li&gt;des APIs plus ouvertes facilitant la synchronisation entre outils,&lt;/li&gt;
