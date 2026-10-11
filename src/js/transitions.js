@@ -9,6 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
     navigation.addEventListener("navigate", (event) => {
       const toUrl = new URL(event.destination.url);
       if (toUrl.origin !== location.origin) return;
+      if (!event.canIntercept || event.hashChange || event.downloadRequest !== null) return;
+      // Let the browser open files (feed.xml, images, PDFs) itself, they have no <main> to swap.
+      if (/\.\w+$/.test(toUrl.pathname) && !toUrl.pathname.endsWith(".html")) return;
 
       event.intercept({
         handler: async () => {
